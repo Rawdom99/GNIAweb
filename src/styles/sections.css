@@ -48,8 +48,7 @@
     gap: 40px;
     align-items: center;
     width: 100%;
-    width: 100%;
-    max-width: 1400px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
@@ -140,7 +139,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 5 / 4;
-    max-width: 500px;
+    max-width: min(500px, 100%);
     overflow: hidden;
 }
 
@@ -196,6 +195,16 @@
     .hero-tagline {
         margin-left: auto;
         margin-right: auto;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .hero-typing-title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
     }
 }
 
