@@ -732,12 +732,24 @@
 /* Responsive Switching (Tablet/Mobile) */
 @media (max-width: 1024px) {
     .tabs-buttons-container {
-        display: none !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0 15px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        max-width: 380px;
+        min-width: unset;
+        padding: 14px 20px;
+        border-radius: 12px;
+        font-size: 0.85rem !important;
     }
 
     .mobile-tabs-dropdown {
-        display: block !important;
-        margin-bottom: 25px;
+        display: none !important;
     }
 }
 
@@ -1041,13 +1053,15 @@
 
 @media (max-width: 992px) {
     .tabs-buttons-container {
-        display: none;
-        /* Hide buttons on mobile */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        /* Show buttons vertically on mobile */
     }
 
     .mobile-tabs-dropdown {
-        display: block;
-        /* Show dropdown */
+        display: none !important;
+        /* Hide dropdown */
     }
 
     .tab-grid {

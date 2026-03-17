@@ -912,20 +912,27 @@
 /* Responsive Tabs */
 @media (max-width: 900px) {
 
-    /* Mobile Tabs Menu Dropdown */
-    .tabs-buttons-container {
-        display: none;
-        /* Hide desktop buttons on mobile */
+    /* Hide the dropdown, show desktop buttons instead */
+    .mobile-tabs-dropdown {
+        display: none !important;
     }
 
-    .mobile-tabs-dropdown {
-        display: block !important;
+    .tabs-buttons-container {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    .tab-btn {
         width: 100%;
-        max-width: 400px;
-        margin: 0 auto 10px auto;
-        position: relative;
-        z-index: 1000;
-        /* Elevamos el contenedor para sobrepasar la tarjeta */
+        max-width: 380px;
+        min-width: unset;
+        padding: 14px 20px;
+        border-radius: 12px;
+        font-size: 0.85rem !important;
     }
 
     .mobile-tabs-toggle {
