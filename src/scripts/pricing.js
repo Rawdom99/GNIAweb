@@ -132,8 +132,15 @@ function updatePrices(currency) {
 
         // Preserve the discount badge if it exists
         const badge = el.querySelector('.discount-badge');
-        const badgeHtml = badge ? badge.outerHTML : '';
-        el.innerHTML = `${badgeHtml}${rateData.symbol}${formattedPrice} <small>${currency}/año</small>`;
+        const badgeClone = badge ? badge.cloneNode(true) : null;
+
+        // Safe DOM manipulation instead of innerHTML
+        el.textContent = '';
+        if (badgeClone) el.appendChild(badgeClone);
+        el.appendChild(document.createTextNode(`${rateData.symbol}${formattedPrice} `));
+        const small = document.createElement('small');
+        small.textContent = `${currency}/año`;
+        el.appendChild(small);
     });
 
     // Update monthly prices
@@ -144,6 +151,11 @@ function updatePrices(currency) {
 
         const convertedPrice = basePrice * rateData.rate;
         const formattedPrice = formatPrice(convertedPrice, currency, rateData);
-        el.innerHTML = `${rateData.symbol}${formattedPrice} <small>${currency}/mes</small>`;
+
+        // Safe DOM manipulation instead of innerHTML
+        el.textContent = `${rateData.symbol}${formattedPrice} `;
+        const small = document.createElement('small');
+        small.textContent = `${currency}/mes`;
+        el.appendChild(small);
     });
 }

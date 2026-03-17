@@ -14,9 +14,11 @@
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' https://firebasestorage.googleapis.com https://flagcdn.com data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://fonts.googleapis.com;">
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' https://firebasestorage.googleapis.com https://flagcdn.com data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://fonts.googleapis.com; frame-src 'self' https://www.google.com https://app.supademo.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
@@ -1528,7 +1530,7 @@
 
                         <div class="form-group">
                             <label class="form-label">Mensaje</label>
-                            <textarea class="form-textarea"
+                            <textarea class="form-textarea" name="message" maxlength="1000" required
                                 placeholder="Cuéntanos sobre tu operación y qué necesitas mejorar..."></textarea>
                         </div>
 
@@ -1757,7 +1759,7 @@
                 <a href="#contact" class="btn-primary footer-contact-btn">Ponte en Contacto</a>
 
                 <div class="footer-social-wrapper">
-                    <a href="https://wa.me/yournumber" class="social-icon whatsapp" target="_blank"
+                    <a href="https://wa.me/message/4RG3SYN3XQ45O1" class="social-icon whatsapp" target="_blank"
                         rel="noopener noreferrer" aria-label="WhatsApp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="currentColor">
@@ -1820,6 +1822,7 @@
                 Tu navegador no soporta el elemento de video.
             </video>
             <iframe id="modalSupademo" src="" title="Supademo Interactive Demo" frameborder="0" allow="clipboard-write"
+                sandbox="allow-scripts allow-same-origin allow-popups"
                 webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen
                 style="display: none; width: 100%; height: 100%; min-height: 500px; border-radius: 12px; background-color: transparent;"></iframe>
         </div>

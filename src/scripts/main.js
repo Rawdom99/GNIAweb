@@ -194,19 +194,29 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const moduleTags = document.querySelectorAll('.module-tag[data-video], .module-tag[data-supademo]');
+
+        // Allowed domains for dynamic media loading
+        const allowedDomains = ['app.supademo.com', 'firebasestorage.googleapis.com'];
+        const isAllowedUrl = (url) => {
+            try {
+                const parsed = new URL(url);
+                return allowedDomains.some(d => parsed.hostname === d || parsed.hostname.endsWith('.' + d));
+            } catch { return false; }
+        };
+
         moduleTags.forEach(tag => {
             tag.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const videoUrl = tag.getAttribute('data-video');
                 const supaUrl = tag.getAttribute('data-supademo');
 
-                if (supaUrl && modalSupademo) {
+                if (supaUrl && modalSupademo && isAllowedUrl(supaUrl)) {
                     modalVideo.style.display = 'none';
                     modalSupademo.style.display = 'block';
                     modalSupademo.src = supaUrl;
                     videoModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
-                } else if (videoUrl) {
+                } else if (videoUrl && isAllowedUrl(videoUrl)) {
                     if (modalSupademo) modalSupademo.style.display = 'none';
                     modalVideo.style.display = 'block';
                     modalVideo.src = videoUrl;

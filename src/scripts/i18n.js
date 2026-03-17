@@ -27,10 +27,29 @@ function applyTranslations(translations) {
         const key = element.getAttribute('data-i18n');
         const value = getNestedValue(translations, key);
         if (value) {
-            // Using innerHTML to allow HTML tags in the JSON (like spans for styling)
-            element.innerHTML = value;
+            // Sanitize HTML from translations to prevent XSS
+            element.innerHTML = sanitizeHTML(value);
         }
     });
+}
+
+/**
+ * Sanitize HTML string: allow only safe formatting tags, strip scripts & event handlers.
+ */
+function sanitizeHTML(str) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(str, 'text/html');
+    // Remove all script elements
+    doc.querySelectorAll('script').forEach(el => el.remove());
+    // Remove event handler attributes from all elements
+    doc.body.querySelectorAll('*').forEach(el => {
+        for (const attr of [...el.attributes]) {
+            if (attr.name.startsWith('on') || attr.value.includes('javascript:')) {
+                el.removeAttribute(attr.name);
+            }
+        }
+    });
+    return doc.body.innerHTML;
 }
 
 function getNestedValue(obj, key) {

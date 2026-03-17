@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sTrigger) sTrigger.addEventListener('click', () => mSelector.classList.toggle('open'));
     document.querySelectorAll('.selector-option').forEach(opt => {
         opt.addEventListener('click', () => {
-            if (cSelName) cSelName.innerHTML = opt.innerHTML;
+            if (cSelName) cSelName.textContent = opt.textContent;
             if (mSelector) mSelector.classList.remove('open');
             const dTab = document.querySelector(`.feature-tab[data-target="${opt.getAttribute('data-target')}"]`);
             if (dTab) dTab.click();
