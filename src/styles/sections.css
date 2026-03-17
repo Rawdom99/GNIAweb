@@ -44,7 +44,7 @@
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
     width: 100%;
@@ -147,7 +147,11 @@
 
 @media (min-width: 993px) {
     .catalog-carousel-5x4 {
-        max-width: 700px;
+        max-width: 900px;
+    }
+
+    .hero-title {
+        font-size: 55px;
     }
 }
 
@@ -158,7 +162,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
@@ -213,6 +217,17 @@
     }
 }
 
+.post-hero-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .post-hero-title {
+        font-size: 20px !important;
+    }
+}
 
 /* Tablet refinements */
 @media (min-width: 769px) and (max-width: 1024px) {
