@@ -1,0 +1,19 @@
+{
+    "hero": {
+        "title": "Software 360° para <span class='text-gradient-gold'>Negocios Gastronómicos</span>",
+        "subtitle": "Desde la compra del insumo hasta el plato en la mesa",
+        "description": "Tendrás el control de cada Ingrediente, Receta, Inventario, Comanda, Rol, Gasto, Venta, en un Software ligero que funciona como un Agente experto en la gestión de tu negocio.",
+        "cta_demo": "Iniciar demo",
+        "cta_download": "Descarga gratis"
+    },
+    "intro": {
+        "title": "Para Chefs Independientes y restaurantes con equipos de 1 hasta 20 personas.",
+        "description": "GNIA está optimizada para simplificar las tareas operativas y administrativas de tu negocio, con el objetivo de liberarte tiempo para que puedas escalar ventas."
+    },
+    "business_tabs": {
+        "title": "Así funciona en tu negocio"
+    },
+    "features": {
+        "main_title": "Gestiona toda tu Gastronomía con funciones adaptadas a todo tipo de cocina."
+    }
+}

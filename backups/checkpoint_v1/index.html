@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>GNIA | El Software de Gestión Gastronómica que Maximiza tu Rentabilidad</title>
+    <meta name="description"
+        content="Simplifica costos, inventarios y administración de tu restaurante con GNIA. La herramienta definitiva para chefs y emprendedores gastronómicos en Latinoamérica. ¡Pruébala ahora!">
+    <meta name="keywords"
+        content="Software para restaurantes, gestión gastronómica, control de costos cocina, administración de negocios de comida, Bogotá, Colombia">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' https://firebasestorage.googleapis.com https://flagcdn.com data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://fonts.googleapis.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GNIA - Toma el control total de tu negocio gastronómico.">
+    <meta property="og:description"
+        content="La app diseñada por expertos para profesionalizar tu cocina y aumentar tus márgenes.">
+    <meta property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FGNIAsitioweb.jpg?alt=media&token=80cf8e7c-b5c9-462e-acf6-73b769f745e6">
+
+    <!-- Critical CSS para Core Web Vitals (Prevenir FOUC) -->
+    <style id="critical-css">
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap');
+
+        :root {
+            --color-bg-main: #020617;
+            --color-bg-aquamarine: linear-gradient(180deg, rgba(0, 220, 255, 0.25) 0%, rgba(15, 23, 42, 0.3) 50%, rgba(2, 6, 23, 0.90) 100%);
+            --color-text-primary: #F8FAFC;
+            --font-main: 'Montserrat', sans-serif;
+            --font-heading: 'Orbitron', sans-serif;
+            --gradient-metal-gold: linear-gradient(135deg, #B8860B 0%, #FFD700 20%, #FFF9AA 45%, #FFD700 70%, #B8860B 100%);
+        }
+
+        body {
+            margin: 0;
+            background: var(--color-bg-aquamarine);
+            background-attachment: fixed;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-primary);
+            font-family: var(--font-main);
+            min-height: 100vh;
+        }
+
+        .text-gradient-gold {
+            background: var(--gradient-metal-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/sections.css">
+    <link rel="stylesheet" href="src/styles/services-stacking.css">
+    <link rel="stylesheet" href="src/styles/pricing.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Schema.org Data for AI Indexing and GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GNIA",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0", 
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "150"
+      },
+      "description": "Software especializado en la gestión, cálculo de costos y estandarización de recetas para el sector gastronómico en Latinoamérica.",
+      "author": {
+        "@type": "Organization",
+        "name": "Gastronomic Neural IA",
+        "url": "https://www.gnia.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.gnia.com"
+      }
+    }
+    </script>
+
+    <!-- Schema.org FAQ Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo ayuda GNIA a detectar y reducir los costos ocultos en mi operación gastronómica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GNIA analiza cada gramo de su inventario, permitiéndole identificar fugas de dinero por mermas no controladas o variaciones de precios de proveedores en tiempo real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es posible calcular el margen de utilidad real de cada plato usando la estandarización de recetas de GNIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Nuestro sistema calcula el costo exacto por porción, incluyendo mermas y costos indirectos, para que usted sepa cuánto gana realmente en cada venta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo controlar el inventario de mis insumos desde el celular sin estar presente en el restaurante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GNIA funciona en la nube de Google Claude, permitiéndole ver existencias, alertas de stock mínimo y movimientos de bodega desde cualquier lugar con conexión a internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "No soy experto en tecnología, ¿qué tan difícil es para un chef o dueño de negocio aprender a usar GNIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diseñamos GNIA pensando en la velocidad de una cocina. La interfaz es intuitiva y sencilla, eliminando la fricción técnica para que usted se enfoque en cocinar y no en configurar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tan segura está mi información y mis recetas dentro de la plataforma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sus datos están protegidos por la infraestructura de Firebase con estándares de seguridad de grado industrial y copias de seguridad automáticas. Sus recetas son su activo más valioso y solo usted tiene acceso a ellas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿GNIA funciona para todo tipo de negocios gastronómicos como dark kitchens, cafeterías o Food Trucks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutamente. El sistema de gestión de costos de GNIA es flexible y se adapta a cualquier modelo que transforme materia prima en productos terminados, sin importar el tamaño del negocio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En cuánto tiempo empezaré a ver una mejora en la rentabilidad de mi restaurante tras implementar GNIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La mayoría de nuestros usuarios reportan una optimización del 15% al 20% en sus costos de materia prima durante los primeros 30 a 60 días de uso constante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo gestionar múltiples sedes o puntos de venta desde una misma cuenta de GNIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. GNIA está diseñado para escalar con usted. Puede centralizar la gestión de compras y costos de todos sus locales en un solo tablero de control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La aplicación está adaptada a la realidad del mercado gastronómico en Latinoamérica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. A diferencia de softwares extranjeros, GNIA entiende los modelos de costeo, unidades de medida y dinámicas operativas propias de la región."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué soporte técnico recibo si tengo dudas con el uso de la plataforma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contamos con un centro de ayuda especializado y soporte directo para asegurar que su operación nunca se detenga por una duda técnica."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="#" class="logo-container">
+                <img src="src/assets/logo-v2.png" alt="GNIA Logo" class="logo-img" width="180" height="60">
+            </a>
+
+            <!-- Desktop Nav (Centered) -->
+            <!-- Desktop Nav (Centered) -->
+            <nav class="nav-menu desktop-only">
+                <div class="nav-item-dropdown">
+                    <a href="#hero" class="nav-link">Funciones ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="features-free.html" class="dropdown-item hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="dropdown-item hover-emerald">PLAN FLASH</a>
+                        <a href="features-pro.html" class="dropdown-item hover-blue">PLAN PRO</a>
+                        <a href="features-gold.html" class="dropdown-item hover-gold">PLAN GOLD</a>
+                        <a href="features-elite.html" class="dropdown-item hover-ruby">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="dropdown-item hover-tornasol">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="nav-link">Precios</a>
+                <a href="skool.html" class="nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="nav-link">Casos de Éxito</a>
+            </nav>
+
+            <!-- Header Actions (Right) -->
+            <div class="header-actions desktop-only">
+                <button class="btn-neutral">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    Iniciar Sesión
+                </button>
+                <a href="#contact" class="btn-cta-gold-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+                    Asesorías
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer (Hidden by default) -->
+        <div class="mobile-menu-drawer">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-toggle" id="mobileFunctionsToggle">
+                        <span>Funciones</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="mobile-submenu" id="mobileFunctionsSubmenu">
+                        <a href="features-free.html" class="mobile-submenu-link hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="mobile-submenu-link">PLAN FLASH</a>
+                        <a href="features-pro.html" class="mobile-submenu-link">PLAN PRO</a>
+                        <a href="features-gold.html" class="mobile-submenu-link">PLAN GOLD</a>
+                        <a href="features-elite.html" class="mobile-submenu-link">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="mobile-submenu-link">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="mobile-nav-link">Precios</a>
+                <a href="skool.html" class="mobile-nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="mobile-nav-link">Casos de Éxito</a>
+                <div class="mobile-actions">
+                    <button class="btn-neutral full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        Iniciar Sesión
+                    </button>
+                    <a href="#contact" class="btn-cta-gold-header full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path
+                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        Asesorías
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+
+        <section id="hero" class="hero-section">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FGNIAvideosLanding%2FGNIAHeroEsfera.mp4?alt=media&token=0298df50-562e-45de-b58a-1963c6697e8c"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container-grid">
+                <!-- Left Column -->
+                <div class="hero-text-col">
+                    <h1 class="hero-title">
+                        Software 360° para <br>
+                        <span class="text-gradient-gold-hero">Negocios Gastronómicos</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">Ten el control de:</h2>
+
+                    <div class="hero-typing-title">
+                        <span class="typed-text text-gradient-gold-hero"></span><span class="typing-cursor">|</span>
+                    </div>
+
+                    <p class="hero-tagline">
+                        Con GNIA tu Aliado Tecnológico experto en gestionar tu negocio, desde cualquier dispositivo.
+                    </p>
+
+                    <div class="hero-actions">
+                        <button class="btn-primary">
+                            <i class="bi bi-pc-display" style="margin-right: 8px;"></i> Iniciar Demo
+                        </button>
+                        <a href="https://play.google.com/store/apps" class="btn-primary" target="_blank">
+                            <i class="bi bi-android2" style="margin-right: 8px;"></i> Descarga Gratis
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Animated Carousel -->
+                <div class="hero-catalog-col">
+                    <div class="catalog-carousel-5x4">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F1Insumos.png?alt=media&token=f2e8bc7d-8cf7-4d4d-bb1d-8908e047b11a"
+                            alt="Insumos" class="catalog-img active" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F2Recetas.png?alt=media&token=2502ef4e-7039-456f-a391-3d770f6887d1"
+                            alt="Recetas" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F3Ventas.png?alt=media&token=10bf538f-e695-4204-8ac2-d86d08c9ef87"
+                            alt="Ventas" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F4Inventario.png?alt=media&token=90de4629-6308-4205-bd96-bcc80c5f183b"
+                            alt="Inventario" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F5Gastos.png?alt=media&token=474457cd-6320-483e-a316-e9da85da5dce"
+                            alt="Gastos" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F6Proveedores.png?alt=media&token=48d331f0-181d-483a-83cd-86cf9cc706fe"
+                            alt="Proveedores" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F7Catalogos.png?alt=media&token=0fa5f5da-92d0-4e85-9d0c-b85e7c7aa606"
+                            alt="Catalogos" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F8Facturacion.png?alt=media&token=a686a73f-8cc6-4c17-a552-8bbc96d30809"
+                            alt="Facturacion" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F9Cotizaciones.png?alt=media&token=e8776c78-b57a-4e78-b4b2-cf52cab460c2"
+                            alt="Cotizaciones" class="catalog-img" width="1200" height="960">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Hero%2F9Cotizaciones.png?alt=media&token=e8776c78-b57a-4e78-b4b2-cf52cab460c2"
+                            alt="Roles" class="catalog-img" width="1200" height="960">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Post-Hero Animated Gallery Section -->
+        <section class="post-hero-gallery-section" style="padding: 40px 0; overflow: hidden; position: relative;">
+            <div class="container text-center">
+                <h2 class="text-gradient-gold-hero" style="font-size: 1.8rem; font-weight: 700; margin-bottom: 30px;">
+                    Para Chefs Independientes y Negocios Gastronómicos con Pequeños, Medianos y Grandes Equipos.
+                </h2>
+            </div>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Tarjeta 1: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesFullService.webp?alt=media&token=703cd623-bb08-4a8e-b477-f015744c4750"
+                            alt="Rest. Full Service" loading="lazy">
+                        <span class="gallery-card-title">Rest. Full Service</span>
+                    </a>
+                    <!-- Tarjeta 2: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefPrivado.webp?alt=media&token=d615c0ce-fb84-4a66-8654-3b8f993f4531"
+                            alt="Chef Privados" loading="lazy">
+                        <span class="gallery-card-title">Chef Privados</span>
+                    </a>
+                    <!-- Tarjeta 3: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCocinaHoteles.webp?alt=media&token=079c8909-d285-48d0-b176-0722d9827298"
+                            alt="Rest. Hoteles" loading="lazy">
+                        <span class="gallery-card-title">Rest. Hoteles</span>
+                    </a>
+                    <!-- Tarjeta 4: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FFoodTruks.webp?alt=media&token=bd1e5636-6088-464c-a4ac-a24301adafcf"
+                            alt="FoodTrucks" loading="lazy">
+                        <span class="gallery-card-title">FoodTrucks</span>
+                    </a>
+                    <!-- Tarjeta 5: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefEjecutivo.webp?alt=media&token=990108b3-85f7-4687-bf85-7164b4b2159d"
+                            alt="Chef Ejecutivo" loading="lazy">
+                        <span class="gallery-card-title">Chef Ejecutivo</span>
+                    </a>
+                    <!-- Tarjeta 6: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesMedianos.webp?alt=media&token=e66a7262-d160-44c2-a958-d68c6301223c"
+                            alt="Rest. Medianos" loading="lazy">
+                        <span class="gallery-card-title">Rest. Medianos</span>
+                    </a>
+                    <!-- Tarjeta 7: FLASH -->
+                    <a href="features-flash.html" class="gallery-card glow-flash">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefPersonal.webp?alt=media&token=04d0ebf9-d344-40c8-b980-90658704768e"
+                            alt="Chef Personal" loading="lazy">
+                        <span class="gallery-card-title">Chef Personal</span>
+                    </a>
+                    <!-- Tarjeta 8: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCaterings.webp?alt=media&token=e931ec82-e7ab-4142-a1c7-6bb5ae9266e8"
+                            alt="Catering" loading="lazy">
+                        <span class="gallery-card-title">Catering</span>
+                    </a>
+                    <!-- Tarjeta 9: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FGastroBar.webp?alt=media&token=f67f291d-8573-41d2-87ac-90b352ee9d5b"
+                            alt="GastroBares" loading="lazy">
+                        <span class="gallery-card-title">GastroBares</span>
+                    </a>
+                    <!-- Tarjeta 10: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FPanaderias.webp?alt=media&token=c27a7c6d-2f41-4b8e-9989-ee3bd581c756"
+                            alt="Panaderias" loading="lazy">
+                        <span class="gallery-card-title">Panaderias</span>
+                    </a>
+                    <!-- Tarjeta 11: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestauranteFullService.webp?alt=media&token=6b7f3083-936b-4f32-bbe0-1b3b62bf741a"
+                            alt="Rest. Full Service" loading="lazy">
+                        <span class="gallery-card-title">Rest. Full Service</span>
+                    </a>
+                    <!-- Tarjeta 12: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesFastFood.webp?alt=media&token=4f7d8cae-937c-4f18-a9b5-4a18ac9bdaea"
+                            alt="Rest. FastFood" loading="lazy">
+                        <span class="gallery-card-title">Rest. FastFood</span>
+                    </a>
+                    <!-- Tarjeta 13: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FFerias.webp?alt=media&token=886885d1-1ddd-4ddf-ba3a-80163663cb67"
+                            alt="Ferias" loading="lazy">
+                        <span class="gallery-card-title">Ferias</span>
+                    </a>
+                    <!-- Tarjeta 14: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCocinasKDS.webp?alt=media&token=3793ab86-9f9f-41ab-b4ba-5a96f89999b3"
+                            alt="Cocinas KDS" loading="lazy">
+                        <span class="gallery-card-title">Cocinas KDS</span>
+                    </a>
+                    <!-- Tarjeta 15: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FDarkKitchens.webp?alt=media&token=964f3ffe-db0e-4188-8a83-e5ad859cad04"
+                            alt="Dark Kirchens" loading="lazy">
+                        <span class="gallery-card-title">Dark Kirchens</span>
+                    </a>
+
+                    <!-- DUPLICATE SET for infinite loop -->
+                    <!-- Tarjeta 1: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesFullService.webp?alt=media&token=703cd623-bb08-4a8e-b477-f015744c4750"
+                            alt="Rest. Full Service" loading="lazy">
+                        <span class="gallery-card-title">Rest. Full Service</span>
+                    </a>
+                    <!-- Tarjeta 2: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefPrivado.webp?alt=media&token=d615c0ce-fb84-4a66-8654-3b8f993f4531"
+                            alt="Chef Privados" loading="lazy">
+                        <span class="gallery-card-title">Chef Privados</span>
+                    </a>
+                    <!-- Tarjeta 3: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCocinaHoteles.webp?alt=media&token=079c8909-d285-48d0-b176-0722d9827298"
+                            alt="Rest. Hoteles" loading="lazy">
+                        <span class="gallery-card-title">Rest. Hoteles</span>
+                    </a>
+                    <!-- Tarjeta 4: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FFoodTruks.webp?alt=media&token=bd1e5636-6088-464c-a4ac-a24301adafcf"
+                            alt="FoodTrucks" loading="lazy">
+                        <span class="gallery-card-title">FoodTrucks</span>
+                    </a>
+                    <!-- Tarjeta 5: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefEjecutivo.webp?alt=media&token=990108b3-85f7-4687-bf85-7164b4b2159d"
+                            alt="Chef Ejecutivo" loading="lazy">
+                        <span class="gallery-card-title">Chef Ejecutivo</span>
+                    </a>
+                    <!-- Tarjeta 6: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesMedianos.webp?alt=media&token=e66a7262-d160-44c2-a958-d68c6301223c"
+                            alt="Rest. Medianos" loading="lazy">
+                        <span class="gallery-card-title">Rest. Medianos</span>
+                    </a>
+                    <!-- Tarjeta 7: FLASH -->
+                    <a href="features-flash.html" class="gallery-card glow-flash">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FChefPersonal.webp?alt=media&token=04d0ebf9-d344-40c8-b980-90658704768e"
+                            alt="Chef Personal" loading="lazy">
+                        <span class="gallery-card-title">Chef Personal</span>
+                    </a>
+                    <!-- Tarjeta 8: PRO -->
+                    <a href="features-pro.html" class="gallery-card glow-pro">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCaterings.webp?alt=media&token=e931ec82-e7ab-4142-a1c7-6bb5ae9266e8"
+                            alt="Catering" loading="lazy">
+                        <span class="gallery-card-title">Catering</span>
+                    </a>
+                    <!-- Tarjeta 9: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FGastroBar.webp?alt=media&token=f67f291d-8573-41d2-87ac-90b352ee9d5b"
+                            alt="GastroBares" loading="lazy">
+                        <span class="gallery-card-title">GastroBares</span>
+                    </a>
+                    <!-- Tarjeta 10: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FPanaderias.webp?alt=media&token=c27a7c6d-2f41-4b8e-9989-ee3bd581c756"
+                            alt="Panaderias" loading="lazy">
+                        <span class="gallery-card-title">Panaderias</span>
+                    </a>
+                    <!-- Tarjeta 11: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestauranteFullService.webp?alt=media&token=6b7f3083-936b-4f32-bbe0-1b3b62bf741a"
+                            alt="Rest. Full Service" loading="lazy">
+                        <span class="gallery-card-title">Rest. Full Service</span>
+                    </a>
+                    <!-- Tarjeta 12: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FRestaurantesFastFood.webp?alt=media&token=4f7d8cae-937c-4f18-a9b5-4a18ac9bdaea"
+                            alt="Rest. FastFood" loading="lazy">
+                        <span class="gallery-card-title">Rest. FastFood</span>
+                    </a>
+                    <!-- Tarjeta 13: GOLD -->
+                    <a href="features-gold.html" class="gallery-card glow-gold">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FFerias.webp?alt=media&token=886885d1-1ddd-4ddf-ba3a-80163663cb67"
+                            alt="Ferias" loading="lazy">
+                        <span class="gallery-card-title">Ferias</span>
+                    </a>
+                    <!-- Tarjeta 14: ENTERPRISE -->
+                    <a href="features-enterprise.html" class="gallery-card glow-enterprise">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FCocinasKDS.webp?alt=media&token=3793ab86-9f9f-41ab-b4ba-5a96f89999b3"
+                            alt="Cocinas KDS" loading="lazy">
+                        <span class="gallery-card-title">Cocinas KDS</span>
+                    </a>
+                    <!-- Tarjeta 15: ELITE -->
+                    <a href="features-elite.html" class="gallery-card glow-elite">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FCarruselPostHero%2FDarkKitchens.webp?alt=media&token=964f3ffe-db0e-4188-8a83-e5ad859cad04"
+                            alt="Dark Kirchens" loading="lazy">
+                        <span class="gallery-card-title">Dark Kirchens</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlight Quote Section -->
+        <section class="highlight-quote-section">
+            <div class="container">
+                <div class="highlight-box">
+                    <div class="highlight-content">
+                        <p class="highlight-text">
+                            GNIA está optimizada para simplificar las tareas operativas y administrativas de tu negocio,
+                            con el objetivo de liberarte tiempo para que puedas escalar ventas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 2: Tabbed Navigation (Business Profiles) -->
+        <section class="tabs-section">
+            <div class="container">
+                <h1 class="section-title text-gradient-gold-hero tab-section-title">Así funciona en tu negocio</h1>
+
+                <!-- Mobile & Tablet Dropdown -->
+                <div class="mobile-tabs-dropdown">
+                    <div class="mobile-tabs-toggle" id="mobileTabsToggle">
+                        <span>Chef Independiente</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="mobile-tabs-menu" id="mobileTabsMenu">
+                        <div class="mobile-tabs-item" data-tab="tab-chef">Chef Independiente</div>
+                        <div class="mobile-tabs-item" data-tab="tab-small">Restaurantes Pequeños</div>
+                        <div class="mobile-tabs-item" data-tab="tab-large">Restaurantes Medianos y Grandes</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Tabs (Hidden on Tablet/Mobile) -->
+                <div class="tabs-buttons-container">
+                    <button class="tab-btn tab-btn-chef active" data-tab="tab-chef">
+                        <span>Chefs<br>Independientes</span>
+                    </button>
+                    <button class="tab-btn tab-btn-small" data-tab="tab-small">
+                        <span>Restaurantes<br>Pequeños</span>
+                    </button>
+                    <button class="tab-btn tab-btn-large" data-tab="tab-large">
+                        <span>Restaurantes<br>Medianos y Grandes</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Tab Contents -->
+        <div class="tabs-content-wrapper glass-card">
+
+            <!-- 1. Chef Independiente -->
+            <div id="tab-chef" class="tab-pane active">
+                <div class="tab-grid">
+                    <div class="tab-text-col">
+                        <h3 class="tab-module-title text-gradient-gold">Chef Independiente</h3>
+                        <h4 class="tab-subtitle">Chef Privado / Personal / Catering</h4>
+                        <p class="tab-desc">
+                            Vende de manera profesional toda tu gastronomía con GNIA, el sistema inteligente
+                            que te permite costear, estandarizar y rentabilizar cada plato, dentro de un
+                            catálogo digital diseñado para compartir con futuros clientes, asegurándote
+                            mejores eventos y ventas.
+                        </p>
+                        <div class="tab-modules-list">
+                            <span class="module-tag" id="video-tag-chef"
+                                data-video="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FGNIAvideosLanding%2FVideosTAGS%2FCrear%20Insumo-1.webm?alt=media&token=b6efcec8-4db4-41da-9db3-f4569305e33c">
+                                <i class="bi bi-play-circle-fill" style="margin-right: 5px; color: #FFD700;"></i> Costeo
+                                de Insumos Inteligente
+                            </span>
+                            <span class="module-tag"
+                                data-video="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FGNIAvideosLanding%2FVideosTAGS%2FRecetas%20Estandarizadas-1.webm?alt=media&token=2eff1e31-c17b-4034-b5f7-f3bd509117d5">
+                                <i class="bi bi-play-circle-fill" style="margin-right: 5px; color: #FFD700;"></i>
+                                Recetas Estandarizadas
+                            </span>
+                            <span class="module-tag">Catálogos Digitales</span>
+                            <span class="module-tag"
+                                data-video="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FGNIAvideosLanding%2FVideosTAGS%2FCrear-Cotizacion.webm?alt=media&token=1225f25c-42e0-4e3d-96c8-ef76a7c3f00c">
+                                <i class="bi bi-play-circle-fill" style="margin-right: 5px; color: #FFD700;"></i>
+                                Cotizador Profesional
+                            </span>
+                        </div>
+                        <div class="tab-plans-actions">
+                            <a href="features-flash.html" class="btn-profile-plan btn-flash">Plan FLASH</a>
+                            <a href="features-pro.html" class="btn-profile-plan btn-pro">Plan PRO</a>
+                        </div>
+                    </div>
+                    <div class="tab-image-col tab-slider" id="chefSlider">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FCI.ChefPrivado1.jpg?alt=media&token=a34d0d54-d235-4952-bdc9-1154b94159eb"
+                            alt="Chef Independiente Slide 1" class="tab-img active" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FCI.ChefPrivado3.jpg?alt=media&token=f196f634-b115-4d58-9fd6-2b5125162994"
+                            alt="Chef Independiente Slide 2" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FCI.ChefCatering.jpg?alt=media&token=fac97fe9-de37-4a85-bc16-39b97faab3df"
+                            alt="Chef Independiente Slide 3" class="tab-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Restaurantes Pequeños (Merged) -->
+            <div id="tab-small" class="tab-pane">
+                <div class="tab-grid">
+                    <div class="tab-text-col">
+                        <h3 class="tab-module-title text-gradient-gold">Restaurantes Pequeños</h3>
+                        <h4 class="tab-subtitle">Cafeterías / Food Trucks / Dark Kitchens / GastroBar /
+                            Ferias</h4>
+                        <p class="tab-desc">
+                            Administra todo tu negocio con GNIA, desde la cantidad de insumos que le pides
+                            al proveedor hasta el descuento en producción por cada venta realizada. Ten el
+                            control total de tu rentabilidad sin margen de error, crea QRs para tus mesas,
+                            recibe pedidos, asigna roles y genera facturas.
+                        </p>
+                        <div class="tab-modules-list">
+                            <span class="module-tag">Genera Códigos QR</span>
+                            <span class="module-tag">Comparte Catálogo</span>
+                            <span class="module-tag">Recibe Pedidos Personalizados</span>
+                            <span class="module-tag">Registra cada Venta</span>
+                        </div>
+                        <div class="tab-plans-actions">
+                            <a href="features-gold.html" class="btn-profile-plan btn-gold">Plan GOLD</a>
+                        </div>
+                    </div>
+                    <div class="tab-image-col tab-slider" id="smallSlider">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRP.DarkKitchen.jpg?alt=media&token=35f20881-4472-49fa-834f-f1ec4fe0d7c5"
+                            alt="Restaurante Pequeño Slide 1" class="tab-img active" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRP.Ferias.jpg?alt=media&token=905d7d1c-2021-4a9d-a0b9-af93dd88e212"
+                            alt="Restaurante Pequeño Slide 2" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRP.FoodTruck.jpg?alt=media&token=849b18d3-a9b5-4e57-bce2-892142377395"
+                            alt="Restaurante Pequeño Slide 3" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRP.RestaurantePeque%C3%B1o.jpg?alt=media&token=99e692dd-5f29-4f8e-8eed-27934504285f"
+                            alt="Restaurante Pequeño Slide 4" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRP.RestaurantePeque%C3%B1o1.jpg?alt=media&token=419fa55e-51ec-42b5-a1de-4a58cf3e2559"
+                            alt="Restaurante Pequeño Slide 5" class="tab-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Restaurantes Medianos y Grandes (Merged) -->
+            <div id="tab-large" class="tab-pane">
+                <div class="tab-grid">
+                    <div class="tab-text-col">
+                        <h3 class="tab-module-title text-gradient-gold">Restaurantes Medianos y Grandes</h3>
+                        <h4 class="tab-subtitle">Full Service</h4>
+                        <p class="tab-desc">
+                            Ten el control total de tu negocio con GNIA. Optimiza la operación de tu equipo
+                            con la gestión de inventarios y sugerencias de producción gracias al sistema
+                            automático que descuenta de tu stock según cada venta realizada. Asigna roles y
+                            permisos a tu equipo, atiende cada mesa de manera personalizada y obtén
+                            estadísticas precisas de tu rentabilidad.
+                        </p>
+                        <div class="tab-modules-list">
+                            <span class="module-tag">Asignador de Mesas</span>
+                            <span class="module-tag">Administra cada Rol</span>
+                            <span class="module-tag">Estadísticas Financieras</span>
+                            <span class="module-tag">Registro de Propinas</span>
+                        </div>
+                        <div class="tab-plans-actions">
+                            <a href="features-elite.html" class="btn-profile-plan btn-elite">Plan ELITE</a>
+                            <a href="features-enterprise.html" class="btn-profile-plan btn-enterprise">Plan
+                                ENTERPRISE</a>
+                        </div>
+                    </div>
+                    <div class="tab-image-col tab-slider" id="largeSlider">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRMD.Full-Service.jpg?alt=media&token=754900d9-ff43-43ce-8bba-848366cc166a"
+                            alt="Restaurante Grande Slide 1" class="tab-img active" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRMD.Full-Service1.jpg?alt=media&token=9501036e-de81-4ee9-ad74-93965598484c"
+                            alt="Restaurante Grande Slide 2" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRMD.Full-Service2.jpg?alt=media&token=8bad453b-7a79-4328-bda5-bb100874a02d"
+                            alt="Restaurante Grande Slide 3" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRMD.RestauranteGrande.jpg?alt=media&token=7577ea8d-e4e6-4b1c-939e-e37632174cc4"
+                            alt="Restaurante Grande Slide 4" class="tab-img" loading="lazy">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenesPerfiles%2FRMD.RestauranteMediano.jpg?alt=media&token=1f4c7996-6ecb-4ddc-bf3b-374df85109e3"
+                            alt="Restaurante Grande Slide 5" class="tab-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+        <!-- Features Icons Panel -->
+        <div class="features-icons-panel">
+            <div class="feature-icon-item feature-icon-sync has-tooltip">
+                <span class="feature-icon-text">Sincronización <br> Online/Offline</span>
+                <div class="feature-icon-tooltip">
+                    Manten toda tu operacion sincronizada, sin importar si algun integrante del equipo se queda sin
+                    Internet, toda la informacion cargara al instante.
+                </div>
+            </div>
+
+            <div class="feature-icon-item feature-icon-multi has-tooltip">
+                <span class="feature-icon-text">Multi-dispositivo <br> y usuario</span>
+                <div class="feature-icon-tooltip">
+                    Todo tu equipo podra acceder a GNIA desde su propio dispositivo y operar con sus respectivos
+                    permisos
+                </div>
+            </div>
+
+            <div class="feature-icon-item feature-icon-lang has-tooltip">
+                <span class="feature-icon-text">18 divisas <br> y 5 idiomas</span>
+                <div class="feature-icon-tooltip">
+                    Adapta y personaliza tu sistema segun la divisa de tu Pais (Todo LATAM), ademas de su configuracion
+                    para traducirlo en 5 idiomas
+                </div>
+            </div>
+
+            <div class="feature-icon-item feature-icon-pos has-tooltip">
+                <span class="feature-icon-text">Sistema POS <br><small><i>Mundial</i></small></span>
+                <div class="feature-icon-tooltip">
+                    El modo Restaurante te permitira tener tu Punto de Venta integrado, teniendo a disposicion todo el
+                    registro de cada venta realizada.
+                </div>
+            </div>
+
+            <div class="feature-icon-item feature-icon-invoice has-tooltip">
+                <span class="feature-icon-text">Facturación Electrónica <br><small><i>Solo
+                            Colombia</i></small></span>
+                <div class="feature-icon-tooltip">
+                    Manten tu restaurante en regla ante los entes reguladores Colombianos, adquiere la cantidad de
+                    folios necesaria.
+                </div>
+            </div>
+
+            <div class="feature-icon-item feature-icon-support has-tooltip">
+                <span class="feature-icon-text">Personalización <br> y acompañamiento</span>
+                <div class="feature-icon-tooltip">
+                    Disfruta de la interfaz personalizable de GNIA ajustala acorde a tu marca, ademas recibe
+                    acompañamiento desde tu proceso de aprendizaje.
+                </div>
+            </div>
+        </div>
+        </div> <!-- End container -->
+
+
+        <!-- AUTOMATIC BRAND BANNER SECTION -->
+        <section class="text-scrolly-section">
+            <video autoplay muted loop playsinline class="banner-video">
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FGNIAvideosLanding%2FGNIAseccion.webm?alt=media&token=ad683858-8069-4df0-b943-ba9e81583347"
+                    type="video/webm">
+            </video>
+            <div class="banner-overlay"></div>
+
+            <div class="banner-content-wrapper">
+                <div class="banner-item">
+                    <h1 class="h1-banner">
+                        <span class="gnia-gold-title">GNIA</span>
+                        <span class="banner-white-text">te da el Control de tu Negocio</span>
+                    </h1>
+                    <h2 class="h2-banner">Deja atrás el papel, los formatos y programas cuadriculados</h2>
+                    <p class="body-banner">
+                        Simplifica tu operación con una Tecnología ligera, integral y fácil de operar sin importar
+                        tu nivel de Cocina.
+                    </p>
+                    <p class="italic-banner">(Creado por Gastrónomos para Gastrónomos)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Buttons Relocated -->
+        <div class="tabs-actions-container" style="margin-top: 50px; margin-bottom: 20px;">
+            <button class="btn-primary btn-cta-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"
+                    style="margin-right: 8px;">
+                    <path
+                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                </svg>
+                Iniciar demo
+            </button>
+            <a href="https://play.google.com/store/apps" class="btn-primary btn-cta-gold" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"
+                    style="margin-right: 8px;">
+                    <path
+                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>
+                Descarga gratis
+            </a>
+        </div>
+
+        <div class="container" style="margin-top: 120px; margin-bottom: 80px; position: relative; z-index: 10;">
+            <h2 class="section-title text-center text-gradient-gold"
+                style="font-size: clamp(2rem, 5vw, 3.5rem); max-width: 900px; margin: 0 auto; line-height: 1.2;">
+                Gestiona toda tu Gastronomía con funciones adaptadas a todo tipo de cocina.
+            </h2>
+        </div>
+
+        <!-- SERVICES STACKING CARDS SECTION -->
+        <section class="services-stack-section" id="services">
+            <div class="services-stack-container">
+
+                <!-- Service 1: Menú Digital -->
+                <div class="service-stack-panel" data-service="1">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">GESTIÓN</span>
+                            <h3 class="service-stack-title text-gradient-gold">Ingreso de Insumos</h3>
+                            <p class="service-stack-desc">
+                                Registra cada uno de los ingredientes que utilizas en tu operación con sus
+                                respectivos
+                                Gramajes, Medidas y Categorías. Así le facilitarás a GNIA darte las estadísticas
+                                exactas
+                                del stock existente.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Ver Demo</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasInsumos.png?alt=media&token=dd066be9-2255-4728-83ff-e653ba2d917c"
+                                    alt="Ingreso de Insumos" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Reservas -->
+                <div class="service-stack-panel" data-service="2">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">ESTANDARIZACIÓN</span>
+                            <h3 class="service-stack-title text-gradient-gold">Creación de Recetas</h3>
+                            <p class="service-stack-desc">
+                                Crea, Organiza, Estandariza y Rentabiliza cada una de las recetas de tu repertorio
+                                en un Panel Digital, permitiendote conocer margenes, compartir procesos con tu
+                                equipo y modificar precios.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Digitalizar Recetas</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasRecetas.png?alt=media&token=859abafc-e381-4fce-a625-51b351b04bf2"
+                                    alt="Creación de Recetas" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Pedidos en Línea -->
+                <div class="service-stack-panel" data-service="3">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">RENTABILIDAD</span>
+                            <h3 class="service-stack-title text-gradient-gold">Ingeniería de Costos</h3>
+                            <p class="service-stack-desc">
+                                La Lógica robusta de GNIA te permite darle la mejor rentabilidad a tu negocio, no
+                                solo
+                                te descuenta en cada venta los insumos, realiza todo un cálculo validando las
+                                Mermas,
+                                Recetas, Producción, Costos operativos, Impuesto, Costos Fijos y Variables.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Calcular Rentabilidad</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasIngenieriaCostos.png?alt=media&token=ab989c3e-96b9-4d5e-8f54-84e8a406ac2f"
+                                    alt="Ingeniería de Costos" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Encuestas -->
+                <div class="service-stack-panel" data-service="4">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">CONTROL</span>
+                            <h3 class="service-stack-title text-gradient-gold">Gestión de Inventarios</h3>
+                            <p class="service-stack-desc">
+                                Controla la cantidad de Stock y tus pedidos a proveedores a un solo Click, tú como
+                                tu equipo pueden registrar el ingreso y cantidades de insumos, subiendo
+                                automáticamente la información al sistema y actualizando en tiempo real cada dato.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Gestionar Stock</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasInventarios.png?alt=media&token=4740aa7a-ac91-4203-82c3-bd9c9123c3b9"
+                                    alt="Gestión de Inventarios" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Marketing -->
+                <div class="service-stack-panel" data-service="5">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">VISIBILIDAD</span>
+                            <h3 class="service-stack-title text-gradient-gold">Catálogos Digitales</h3>
+                            <p class="service-stack-desc">
+                                Comparte al mundo tus platos, tu estilo y tu negocio de forma profesional y
+                                atractiva, permitiéndole a cada cliente ver una Carta Digital intuitiva y fácil de
+                                manejar, así lo conquistarás antes de que realice su pedido.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Ver Catálogos</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallaCatologos.png?alt=media&token=3c909964-18d9-410f-accb-26cdb7c2b3ba"
+                                    alt="Catálogos Digitales" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Analytics & Reports -->
+                <div class="service-stack-panel" data-service="6">
+                    <div class="service-stack-content">
+                        <div class="service-stack-text">
+                            <span class="service-stack-badge">GESTIÓN INTEGRAL</span>
+                            <h3 class="service-stack-title text-gradient-gold">Negocio 360</h3>
+                            <p class="service-stack-desc">
+                                Administra todo tu negocio y ten el control de Inventarios, Proveedores,
+                                Rendimiento,
+                                Ventas, Comandas, Personal y Finanzas desde uno solo Perfil. GNIA se encarga de los
+                                datos, tu te encargas de actuar para seguir incrementando ventas.
+                            </p>
+                            <button class="service-stack-btn">
+                                <span>Tomar el Control</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="service-stack-media">
+                            <div class="service-stack-image-wrapper">
+                                <div class="service-stack-placeholder" style="display: none;"></div>
+                                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasNegocio360.png?alt=media&token=e27cb8f6-9a5f-4d5c-933c-3052326ede60"
+                                    alt="Negocio 360" class="service-stack-img" loading="lazy" width="1200"
+                                    height="800">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Pricing Plans -->
+        <section id="pricing" class="features-section"
+            style="position: relative; z-index: 20; background: var(--color-bg-main);">
+            <div class="container">
+                <div class="intro-title" style="text-align: center; margin-bottom: 30px;">
+                    <h2 class="text-gradient-gold" style="font-size: 2.5rem;">Planes de Vanguardia</h2>
+                    <p class="intro-text">Elige la potencia que tu cocina necesita.</p>
+                </div>
+
+                <div class="currency-selector-container">
+                    <label for="currency-select" class="currency-label">Conoce su valor en tu moneda 👇</label>
+                    <div class="custom-currency-selector" id="custom-currency-selector">
+                        <div class="selected-currency" id="selected-currency">
+                            <img src="https://flagcdn.com/w40/co.png" alt="COP" class="flag-icon" width="20"
+                                height="15">
+                            <span class="selected-text">Peso Colombiano (COP)</span>
+                            <span class="chevron">▼</span>
+                        </div>
+                        <div class="currency-dropdown" id="currency-dropdown">
+                            <!-- Options will be populated or hardcoded. Let's hardcode for SEO and simplicity as it's a fixed list -->
+                            <div class="currency-option active" data-value="COP">
+                                <img src="https://flagcdn.com/w40/co.png" alt="COP" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">COP</span>
+                                    <span class="currency-name">PESO COLOMBIANO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="USD">
+                                <img src="https://flagcdn.com/w40/us.png" alt="USD" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">USD</span>
+                                    <span class="currency-name">US DOLLAR</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="MXN">
+                                <img src="https://flagcdn.com/w40/mx.png" alt="MXN" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">MXN</span>
+                                    <span class="currency-name">PESO MEXICANO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="PEN">
+                                <img src="https://flagcdn.com/w40/pe.png" alt="PEN" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">PEN</span>
+                                    <span class="currency-name">SOL PERUANO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="EUR">
+                                <img src="https://flagcdn.com/w40/eu.png" alt="EUR" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">EUR</span>
+                                    <span class="currency-name">EURO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="CLP">
+                                <img src="https://flagcdn.com/w40/cl.png" alt="CLP" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">CLP</span>
+                                    <span class="currency-name">PESO CHILENO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="ARS">
+                                <img src="https://flagcdn.com/w40/ar.png" alt="ARS" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">ARS</span>
+                                    <span class="currency-name">PESO ARGENTINO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="BOB">
+                                <img src="https://flagcdn.com/w40/bo.png" alt="BOB" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">BOB</span>
+                                    <span class="currency-name">PESO BOLIVIANO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="CRC">
+                                <img src="https://flagcdn.com/w40/cr.png" alt="CRC" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">CRC</span>
+                                    <span class="currency-name">COLON COSTARRICENSE</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="BRL">
+                                <img src="https://flagcdn.com/w40/br.png" alt="BRL" class="flag-icon">
+                                <div class="currency-info">
+                                    <span class="currency-code">BRL</span>
+                                    <span class="currency-name">REAL BRASILEÑO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                            <div class="currency-option" data-value="GTQ">
+                                <img src="https://flagcdn.com/w40/gt.png" alt="GTQ" class="flag-icon" width="20"
+                                    height="15">
+                                <div class="currency-info">
+                                    <span class="currency-code">GTQ</span>
+                                    <span class="currency-name">QUETZAL GUATEMALTECO</span>
+                                </div>
+                                <span class="check-icon">✓</span>
+                            </div>
+                        </div> <!-- Closes custom-currency-selector -->
+                    </div> <!-- Closes currency-selector-container -->
+
+                    <!-- Pricing Category Tabs -->
+                    <div class="pricing-tabs-container">
+                        <button class="pricing-tab-btn active" data-pricing-tab="pricing-chefs">
+                            <svg class="tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z" />
+                                <line x1="6" y1="17" x2="18" y2="17" />
+                            </svg>
+                            <span class="tab-text">PLANES<br><b>CHEFS</b></span>
+                        </button>
+                        <button class="pricing-tab-btn" data-pricing-tab="pricing-restaurantes">
+                            <svg class="tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18" />
+                                <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3Z" />
+                                <path d="M19 21v-4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4" />
+                                <path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4" />
+                            </svg>
+                            <span class="tab-text">PLANES<br><b>RESTAURANTES</b></span>
+                        </button>
+                    </div>
+
+                    <!-- ========== PANE: Planes Chefs (FREE / FLASH / PRO) ========== -->
+                    <div class="pricing-pane active" id="pricing-chefs">
+                        <div class="pricing-grid pricing-grid-3">
+
+                            <!-- PLAN FREE (Chef) -->
+                            <div class="plan-card free-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">FREE</h3>
+                                    <div class="plan-subtitle">Chefs · Restaurantes · Estudiantes</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly">Gratis</div>
+                                        <div class="plan-price-monthly">Hasta agotar espacio</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Empezar Gratis</a>
+                                <ul class="plan-features">
+                                    <li><strong>✓</strong> Panel Principal</li>
+                                    <li><strong>✓</strong> Costeo de Insumos <small>(Max 50)</small></li>
+                                    <li><strong>✓</strong> Panel de Recetas <small>(Max 5)</small></li>
+                                    <li><strong>✓</strong> Catálogos Profesionales <small>(1 Catálogo)</small></li>
+                                    <li><strong>✓</strong> Cotizaciones Canva <small>(1 Cotización)</small></li>
+                                    <li><strong>✓</strong> Listados de compras automáticos</li>
+                                    <li><strong>✓</strong> Pedidos a proveedores <small>(1 Proveedor)</small></li>
+                                    <li><strong>✓</strong> GNIA Gastronomic Assistant (IA)</li>
+                                    <li><strong>✓</strong> Inventarios por áreas <small>(1 Inventario)</small></li>
+                                </ul>
+                            </div>
+
+                            <!-- PLAN FLASH -->
+                            <div class="plan-card flash-plan">
+                                <div class="plan-badge">Nuevo</div>
+                                <div class="plan-header">
+                                    <h3 class="plan-title">FLASH</h3>
+                                    <div class="plan-subtitle">Chefs Privados / Chefs Personales</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly" data-base-price-year="168000">
+                                            <span class="discount-badge">30% OFF</span>
+                                            $168.000 <small>COP/año</small>
+                                        </div>
+                                        <div class="plan-price-monthly" data-base-price-month="20000">
+                                            $20.000 <small>COP/mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Seleccionar Plan</a>
+                                <ul class="plan-features">
+                                    <li class="feature-highlight"><strong>Todo lo del plan FREE más:</strong></li>
+                                    <li><strong>✓</strong> Costeo de Insumos <small>(Ilimitado)</small></li>
+                                    <li><strong>✓</strong> Panel de Recetas <small>(Ilimitado)</small></li>
+                                    <li><strong>✓</strong> Catálogos Profesionales <small>(Ilimitados)</small></li>
+                                    <li><strong>✓</strong> Cotizaciones Canva <small>(Max 3)</small></li>
+                                    <li><strong>✓</strong> Listados de compras automáticos</li>
+                                    <li><strong>✓</strong> Pedidos a proveedores <small>(Ilimitados)</small></li>
+                                    <li><strong>✓</strong> GNIA Gastronomic Assistant (IA)</li>
+                                </ul>
+                            </div>
+
+                            <!-- PLAN PRO -->
+                            <div class="plan-card pro-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">PRO</h3>
+                                    <div class="plan-subtitle">Chefs Privados / Catering / Chefs Independientes</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly" data-base-price-year="336000">
+                                            <span class="discount-badge">30% OFF</span>
+                                            $336.000 <small>COP/año</small>
+                                        </div>
+                                        <div class="plan-price-monthly" data-base-price-month="40000">
+                                            $40.000 <small>COP/mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Seleccionar Plan</a>
+                                <ul class="plan-features">
+                                    <li class="feature-highlight"><strong>Todo lo del plan FLASH más:</strong></li>
+                                    <li><strong>✓</strong> Perfil Profesional</li>
+                                    <li><strong>✓</strong> Centro de Producción Digital</li>
+
+                                    <li><strong>✓</strong> Cuenta Profesional de Cobro</li>
+                                    <li><strong>✓</strong> Cotizaciones Canva <small>(Ilimitadas)</small></li>
+                                    <li><strong>✓</strong> Pedidos a proveedores <small>(Ilimitados)</small></li>
+                                    <li><strong>✓</strong> GNIA Gastronomic Assistant (IA)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ========== PANE: Planes Restaurantes (FREE / GOLD / ELITE / ENTERPRISE) ========== -->
+                    <div class="pricing-pane" id="pricing-restaurantes">
+                        <div class="pricing-grid pricing-grid-4">
+
+                            <!-- PLAN FREE (DEMO) -->
+                            <div class="plan-card free-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">FREE</h3>
+                                    <div class="plan-subtitle">DEMO · Restaurantes · Estudiantes</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly">Gratis</div>
+                                        <div class="plan-price-monthly">Hasta agotar espacio</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Empezar Gratis</a>
+                                <ul class="plan-features">
+                                    <li><strong>✓</strong> Panel Principal <small>(DEMO)</small></li>
+                                    <li><strong>✓</strong> Costeo de Insumos <small>(Max 50)</small></li>
+                                    <li><strong>✓</strong> Panel de Recetas <small>(Max 5)</small></li>
+                                    <li><strong>✓</strong> Modo Ventas <small>(Simulación 5 ventas)</small></li>
+                                    <li><strong>✓</strong> Catálogos Profesionales <small>(1 Catálogo)</small></li>
+                                    <li><strong>✓</strong> Pedidos a proveedores <small>(1 Proveedor)</small></li>
+                                    <li><strong>✓</strong> GNIA Gastronomic Assistant (IA)</li>
+                                    <li><strong>✓</strong> Inventarios por áreas <small>(1 Inventario)</small></li>
+                                </ul>
+                            </div>
+
+                            <!-- PLAN GOLD -->
+                            <div class="plan-card gold-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">GOLD</h3>
+                                    <div class="plan-subtitle">Dark Kitchens / Cafeterías / Ferias / Food Trucks</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly" data-base-price-year="504000">
+                                            <span class="discount-badge">30% OFF</span>
+                                            $504.000 <small>COP/año</small>
+                                        </div>
+                                        <div class="plan-price-monthly" data-base-price-month="60000">
+                                            $60.000 <small>COP/mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Seleccionar Plan</a>
+                                <ul class="plan-features">
+                                    <li class="feature-highlight"><strong>Todo lo del plan FREE más:</strong></li>
+                                    <li><strong>✓</strong> Modo Ventas</li>
+                                    <li><strong>✓</strong> Centro de Producción Digital</li>
+                                    <li><strong>✓</strong> Sistema de Facturación</li>
+                                    <li><strong>✓</strong> Control Cajeros / Cierres Ciegos</li>
+                                    <li><strong>✓</strong> Stock de insumos por áreas</li>
+                                    <li><strong>✓</strong> Stock de platos por áreas</li>
+                                    <li><strong>✓</strong> Integración de equipos <small>(Multidispositivo)</small></li>
+                                    <li><strong>✓</strong> Asignación de Roles</li>
+                                    <li><strong>✓</strong> Modo Auto service</li>
+                                    <li><strong>✓</strong> Carga Automática Proveedor a Inventario</li>
+                                    <li><strong>✓</strong> Personalización Total</li>
+                                </ul>
+                            </div>
+
+                            <!-- PLAN ELITE -->
+                            <div class="plan-card elite-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">ELITE</h3>
+                                    <div class="plan-subtitle"
+                                        style="font-size: 0.75rem; color: #ef4444; margin-bottom: 5px; opacity: 0.9;">
+                                        <i>(Solo Colombia)</i>
+                                    </div>
+                                    <div class="plan-subtitle">Full Service · Restaurantes Medianos y Grandes</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly" data-base-price-year="936000">
+                                            <span class="discount-badge">35% OFF</span>
+                                            $936.000 <small>COP/año</small>
+                                        </div>
+                                        <div class="plan-price-monthly" data-base-price-month="120000">
+                                            $120.000 <small>COP/mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn">Seleccionar Plan</a>
+                                <ul class="plan-features">
+                                    <li class="feature-highlight"><strong>Todo lo del plan GOLD más:</strong></li>
+                                    <li><strong>✓</strong> Mise en place predictivo</li>
+                                    <li><strong>✓</strong> Delivery Web Shop personalizable (Restaurantes)</li>
+                                    <li><strong>✓</strong> GNIA Strategist (D. Web Shop)</li>
+                                    <li><strong>✓</strong> Modo Full Service</li>
+                                    <li><strong>✓</strong> Pantallas KDS</li>
+                                    <li><strong>✓</strong> Legalidad y Facturación electrónica DIAN <small>(COL)</small>
+                                    </li>
+                                    <li><strong>✓</strong> Personalización Total</li>
+                                    <li><strong>✓</strong> Migración de Datos</li>
+                                </ul>
+                            </div>
+
+                            <!-- PLAN ENTERPRISE -->
+                            <div class="plan-card enterprise-plan">
+                                <div class="plan-header">
+                                    <h3 class="plan-title">ENTERPRISE</h3>
+                                    <div class="plan-subtitle"
+                                        style="font-size: 0.75rem; color: #FFD700; margin-bottom: 5px; opacity: 0.9;">
+                                        <i>(Solo Colombia)</i>
+                                    </div>
+                                    <div class="plan-subtitle">Múltiples Sedes · Restaurantes Medianos y Grandes</div>
+                                    <div class="plan-price-wrapper">
+                                        <div class="plan-price-yearly" data-base-price-year="2340000">
+                                            <span class="discount-badge">35% OFF</span>
+                                            $2'340.000 <small>COP/año</small>
+                                        </div>
+                                        <div class="plan-price-monthly" data-base-price-month="300000">
+                                            $300.000 <small>COP/mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="plan-btn btn-cta-gold">Contactar Ventas</a>
+                                <ul class="plan-features">
+                                    <li class="feature-highlight"><strong>Todo lo del plan ELITE más:</strong></li>
+                                    <li><strong>✓</strong> Delivery Web Shop personalizable (Restaurantes)</li>
+                                    <li><strong>✓</strong> Integración de Sedes</li>
+                                    <li><strong>✓</strong> Estadísticas profesionales de Producto</li>
+                                    <li><strong>✓</strong> Estadísticas Profesionales de Servicio</li>
+                                    <li><strong>✓</strong> Growth GNIA (Analista de Crecimiento IA)</li>
+                                    <li><strong>✓</strong> Personalización Total</li>
+                                    <li><strong>✓</strong> Migración de Datos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Closes container -->
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="features-section">
+            <div class="container">
+                <div class="intro-title" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="text-gradient-blue" style="font-size: 2.5rem;">Contáctanos</h2>
+                    <p class="intro-text">¿Listo para transformar tu cocina? Escríbenos.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 40px; max-width: 800px; margin: 0 auto;">
+                    <form class="contact-form">
+                        <!-- Bot Honeypot -->
+                        <input name="website" type="text" tabindex="-1" autocomplete="off" style="display:none;"
+                            class="visually-hidden" aria-hidden="true">
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-input" placeholder="Chef Executive" name="name" required
+                                    pattern="[a-zA-ZÀ-ÿ\s]{2,50}" maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-input" placeholder="chef@restaurante.com" name="email"
+                                    required maxlength="100">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label class="form-label">WhatsApp</label>
+                                <div class="whatsapp-input-group">
+                                    <div class="prefix-selector" id="whatsapp-prefix-selector">
+                                        <div class="selected-prefix" id="selected-prefix">
+                                            <img src="https://flagcdn.com/w40/co.png" alt="CO" class="prefix-flag">
+                                            <span class="prefix-code">+57</span>
+                                        </div>
+                                        <div class="prefix-dropdown" id="prefix-dropdown">
+                                            <div class="prefix-option" data-code="+57" data-flag="co">
+                                                <img src="https://flagcdn.com/w40/co.png" alt="CO"> <span>+57
+                                                    (Col)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+1" data-flag="us">
+                                                <img src="https://flagcdn.com/w40/us.png" alt="US"> <span>+1
+                                                    (USA)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+52" data-flag="mx">
+                                                <img src="https://flagcdn.com/w40/mx.png" alt="MX"> <span>+52
+                                                    (Mex)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+51" data-flag="pe">
+                                                <img src="https://flagcdn.com/w40/pe.png" alt="PE"> <span>+51
+                                                    (Per)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+54" data-flag="ar">
+                                                <img src="https://flagcdn.com/w40/ar.png" alt="AR"> <span>+54
+                                                    (Arg)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+56" data-flag="cl">
+                                                <img src="https://flagcdn.com/w40/cl.png" alt="CL"> <span>+56
+                                                    (Chi)</span>
+                                            </div>
+                                            <div class="prefix-option" data-code="+34" data-flag="es">
+                                                <img src="https://flagcdn.com/w40/es.png" alt="ES"> <span>+34
+                                                    (Esp)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="tel" class="form-input" placeholder="300 123 4567" id="whatsapp-number"
+                                        name="whatsapp" required pattern="[0-9\s]{7,15}" maxlength="15">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nombre del Negocio</label>
+                                <input type="text" class="form-input" placeholder="Tu Restaurante o Marca Personal"
+                                    name="business" required pattern="[a-zA-Z0-9À-ÿ\s\.,-]{2,100}" maxlength="100">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-textarea"
+                                placeholder="Cuéntanos sobre tu operación y qué necesitas mejorar..."></textarea>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 10px;">
+                            <button type="button" class="btn-primary"
+                                style="background: var(--gradient-metal-blue); color: white; border: none; min-width: 200px;">Enviar
+                                Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center text-gradient-gold" style="margin-bottom: 50px;">Preguntas Frecuentes
+            </h2>
+            <!-- FAQ Category Tabs -->
+            <div class="faq-tabs-container desktop-only">
+                <button class="faq-tab-btn active" data-faq-tab="faq-costos">
+                    <span>Dominio de Costos</span>
+                </button>
+                <button class="faq-tab-btn" data-faq-tab="faq-tech">
+                    <span>Tecnología y Seguridad</span>
+                </button>
+                <button class="faq-tab-btn" data-faq-tab="faq-results">
+                    <span>Resultados y Escalabilidad</span>
+                </button>
+            </div>
+
+            <!-- FAQ Mobile Dropdown -->
+            <div class="mobile-tabs-dropdown faq-mobile-dropdown">
+                <div class="mobile-tabs-toggle" id="faqTabsToggle">
+                    <span>Dominio de Costos</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="mobile-tabs-menu" id="faqTabsMenu">
+                    <div class="mobile-tabs-item active" data-faq-tab="faq-costos">Dominio de Costos</div>
+                    <div class="mobile-tabs-item" data-faq-tab="faq-tech">Tecnología y Seguridad</div>
+                    <div class="mobile-tabs-item" data-faq-tab="faq-results">Resultados y Escalabilidad</div>
+                </div>
+            </div>
+
+            <div class="faq-panes-wrapper">
+
+                <!-- Pane 1: Costos y Fugas -->
+                <div class="faq-tab-pane active" id="faq-costos">
+                    <div class="faq-accordion-wrapper">
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Cómo ayuda GNIA a detectar y reducir los costos ocultos en mi operación
+                                    gastronómica?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>GNIA analiza cada gramo de su inventario, permitiéndole identificar fugas de dinero
+                                    por mermas no controladas o variaciones de precios de proveedores en tiempo real.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Es posible calcular el margen de utilidad real de cada plato usando la
+                                    estandarización de recetas de GNIA?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. Nuestro sistema calcula el costo exacto por porción, incluyendo mermas y costos
+                                    indirectos, para que usted sepa cuánto gana realmente en cada venta.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Cómo puedo controlar el inventario de mis insumos desde el celular sin estar
+                                    presente en el restaurante?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>GNIA funciona en la nube de Google Claude, permitiéndole ver existencias, alertas de
+                                    stock mínimo y movimientos de bodega desde cualquier lugar con conexión a internet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 2: Tecnología y Seguridad -->
+                <div class="faq-tab-pane" id="faq-tech">
+                    <div class="faq-accordion-wrapper">
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>No soy experto en tecnología, ¿qué tan difícil es para un chef o dueño de negocio
+                                    aprender a usar GNIA?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Diseñamos GNIA pensando en la velocidad de una cocina. La interfaz es intuitiva y
+                                    sencilla, eliminando la fricción técnica para que usted se enfoque en cocinar y no
+                                    en configurar.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Qué tan segura está mi información y mis recetas dentro de la plataforma?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sus datos están protegidos por la infraestructura de Firebase con estándares de
+                                    seguridad de grado industrial y copias de seguridad automáticas. Sus recetas son su
+                                    activo más valioso y solo usted tiene acceso a ellas.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿GNIA funciona para todo tipo de negocios gastronómicos como dark kitchens,
+                                    cafeterías o Food Trucks?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutamente. El sistema de gestión de costos de GNIA es flexible y se adapta a
+                                    cualquier modelo que transforme materia prima en productos terminados, sin importar
+                                    el tamaño del negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: Resultados y Escalabilidad -->
+                <div class="faq-tab-pane" id="faq-results">
+                    <div class="faq-accordion-wrapper">
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿En cuánto tiempo empezaré a ver una mejora en la rentabilidad de mi restaurante
+                                    tras implementar GNIA?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>La mayoría de nuestros usuarios reportan una optimización del 15% al 20% en sus
+                                    costos de materia prima durante los primeros 30 a 60 días de uso constante.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Puedo gestionar múltiples sedes o puntos de venta desde una misma cuenta de
+                                    GNIA?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. GNIA está diseñado para escalar con usted. Puede centralizar la gestión de
+                                    compras y costos de todos sus locales en un solo tablero de control.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿La aplicación está adaptada a la realidad del mercado gastronómico en
+                                    Latinoamérica?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sí. A diferencia de softwares extranjeros, GNIA entiende los modelos de costeo,
+                                    unidades de medida y dinámicas operativas propias de la región.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item glass-card">
+                            <button class="faq-question">
+                                <span>¿Qué soporte técnico recibo si tengo dudas con el uso de la plataforma?</span>
+                                <i class="bi bi-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Contamos con un centro de ayuda especializado y soporte directo para asegurar que su
+                                    operación nunca se detenga por una duda técnica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Redesign -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Sections -->
+            <div class="footer-col">
+                <h4 class="footer-title">Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#profiles">Chef Independiente</a></li>
+                    <li><a href="#profiles">Restaurantes Pequeños</a></li>
+                    <li><a href="#profiles">Restaurantes Medianos y Grandes</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Additional Pages -->
+            <div class="footer-col">
+                <h4 class="footer-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="pricing.html">Precios</a></li>
+                    <li><a href="skool.html">GNIA Skool</a></li>
+                    <li><a href="success-stories.html">Casos de Éxito</a></li>
+                    <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact & Social -->
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-title">Conecta con Nosotros</h4>
+                <a href="#contact" class="btn-primary footer-contact-btn">Ponte en Contacto</a>
+
+                <div class="footer-social-wrapper">
+                    <a href="https://wa.me/yournumber" class="social-icon whatsapp" target="_blank"
+                        aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12.031 6.172c-2.32 0-4.591 1.399-4.591 4.382 0 1.563.813 3.126 2.086 4.054l-.546 2.016 2.112-.533c.312.072.634.111.966.111 2.321 0 5.488-1.742 5.488-5.322 0-3.321-2.946-4.708-5.515-4.708zm0 7.824c-.201 0-.398-.026-.546-.06l-1.127.285.293-1.076c-.846-.664-1.393-1.666-1.393-2.671 0-2.115 1.493-3.23 3.235-3.23 1.742 0 3.325.96 3.325 3.15-.001 2.361-2.188 3.553-3.787 3.553l-.001-.001zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 18c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+                        </svg>
+                    </a>
+
+                    <div class="social-icons-grid">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4.001 1.791 4.001 4c0 2.21-1.791 4-4.001 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31 0 2.591.233 3.812.63.111.035.191.139.191.257v4.692c0 .121-.081.227-.2.257-1.129.331-2.313.483-3.084.55v6.522c0 1.838-1.491 3.329-3.328 3.329-1.837 0-3.328-1.491-3.328-3.329 0-1.838 1.491-3.329 3.328-3.329.35 0 .685.056 1 .158v-4.43c-1.493-.42-3.07-.638-4.672-.638V0c1.602 0 3.178.218 4.672.638s2.887 1.054 4.09 1.89c.812-1.636 2.479-2.528 4.09-2.528h-.18z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>GNIA Gastronomic Neural IA &copy; 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Library for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <span class="modal-close-video">&times;</span>
+        <div class="modal-content-video-wrapper">
+            <video id="modalVideo" loop muted playsinline class="modal-video-player">
+                <source src="" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/i18n.js"></script>
+    <script src="src/scripts/services-stacking.js"></script>
+    <script src="src/scripts/catalog-carousel.js"></script>
+    <script src="src/scripts/pricing.js"></script>
+    <script src="src/scripts/typing-animation.js"></script>
+</body>
+
+</html>

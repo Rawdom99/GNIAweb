@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GNIA Plan ELITE - Escalabilidad y analítica avanzada para tu negocio.">
+    <title>PLAN ELITE | GNIA</title>
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/sections.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/styles/features.css">    <style>
+        /* Forzar grid 4 columnas para Plan ELITE */
+        .center-tab-mode .feature-tabs-grid {
+            grid-template-columns: repeat(4, 1fr) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-container">
+                <img src="src/assets/logo-v2.png" alt="GNI.A. Logo" class="logo-img" width="180" height="60">
+            </a>
+            <nav class="nav-menu desktop-only">
+                <div class="nav-item-dropdown">
+                    <a href="index.html#hero" class="nav-link">Funciones ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="features-free.html" class="dropdown-item hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="dropdown-item hover-emerald">PLAN FLASH</a>
+                        <a href="features-pro.html" class="dropdown-item hover-blue">PLAN PRO</a>
+                        <a href="features-gold.html" class="dropdown-item hover-gold">PLAN GOLD</a>
+                        <a href="features-elite.html" class="dropdown-item hover-ruby">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="dropdown-item hover-tornasol">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="nav-link">Precios</a>
+                <a href="skool.html" class="nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="nav-link">Casos de Éxito</a>
+            </nav>
+            <div class="header-actions desktop-only">
+                <button class="btn-neutral">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    Iniciar Sesión
+                </button>
+                <a href="index.html#contact" class="btn-cta-gold-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+                    Asesorías
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-drawer">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-toggle" id="mobileFunctionsToggle">
+                        <span>Funciones</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="mobile-submenu" id="mobileFunctionsSubmenu">
+                        <a href="features-free.html" class="mobile-submenu-link hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="mobile-submenu-link">PLAN FLASH</a>
+                        <a href="features-pro.html" class="mobile-submenu-link">PLAN PRO</a>
+                        <a href="features-gold.html" class="mobile-submenu-link">PLAN GOLD</a>
+                        <a href="features-elite.html" class="mobile-submenu-link">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="mobile-submenu-link">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="mobile-nav-link">Precios</a>
+                <a href="skool.html" class="mobile-nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="mobile-nav-link">Casos de Éxito</a>
+                <div class="mobile-actions">
+                    <button class="btn-neutral full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        Iniciar Sesión
+                    </button>
+                    <a href="index.html#contact" class="btn-cta-gold-header full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path
+                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        Asesorías
+                    </a>
+                </div>
+            </nav>
+        </div>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 85vh; padding-top: 150px;">
+            <div class="hero-slider hero-video" id="hero-slider" data-interval="2000">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb"
+                    class="hero-img active" alt="GNIA Full Service">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513"
+                    class="hero-img" alt="GNIA Cocina Profesional">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAcierreCaja.webp?alt=media&token=6c9a07ce-50c7-47be-ac33-6bc0454b18f6"
+                    class="hero-img" alt="GNIA Cierre Caja">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIARest.FullService.webp?alt=media&token=89d2afb8-2dd7-4cd9-a4d2-00e99d74315f"
+                    class="hero-img" alt="GNIA Rest. Full Service">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAproveedores.webp?alt=media&token=374bbb75-3cea-4939-a702-2b9947e40e49"
+                    class="hero-img" alt="GNIA Proveedores">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAMeseros.webp?alt=media&token=b09173fe-a875-4d43-934c-54487e9fe2c4"
+                    class="hero-img" alt="GNIA Meseros">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaKDS.webp?alt=media&token=de91e48a-4bac-4f3c-ae13-5a9e9e7960a3"
+                    class="hero-img" alt="GNIA Cocina KDS">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIADelivery.webp?alt=media&token=cfaa4068-b401-4569-bdab-692ac0246fa6"
+                    class="hero-img" alt="GNIA Delivery">
+            </div>   </div>
+            <div class="hero-overlay"></div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center;">
+                <h1 class="hero-title" style="max-width: 900px; margin: 0 auto 20px; line-height: 1.2;">
+                    <span class="text-gradient-ruby">Domina tus recetas y rentabilidad</span>
+                    <span class="hero-title-small">sin formatos complejos</span>
+                </h1>
+                <h2
+                    style="color: #fff; font-size: 1.5rem; font-weight: 400; max-width: 750px; margin: 0 auto 40px; opacity: 0.9;">
+                    El control total de tu operación gastronómica empieza aquí
+                </h2>
+                <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                    <button class="btn-primary btn-cta-gold">
+                        <i class="bi bi-display" style="margin-right: 8px;"></i>
+                        Iniciar DEMO
+                    </button>
+                    <a href="https://play.google.com/store/apps" class="btn-primary btn-cta-gold" target="_blank">
+                        <i class="bi bi-phone" style="margin-right: 8px;"></i>
+                        Descargar Gratis
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlighted Text Section -->
+        <section class="features-section plan-ruby center-tab-mode">
+            <div class="container">
+                <div class="features-intro">
+                    <div class="intro-text-wrapper">
+                        <h3 class="intro-title">
+                            Diseñado para chefs, estudiantes y restaurantes de todos los tamaños.
+                        </h3>
+                        <p class="intro-text">
+                            Olvídate de la improvisación y empieza a estandarizar tu cocina, conocer tus márgenes de
+                            ganancia exactos y proyectar una imagen ultra profesional ante tus clientes. Con el Plan
+                            FREE de GNIA. Explora de DEMO del Modo Ventas y entiende como funciona en tu negocio.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle-large text-gradient-gold">¿Que podras hacer en GNIA con el Plan ELITE?</h2>
+                <p class="interact-subtitle"><i>Explorar Funciones</i></p>
+
+                <div class="feature-tabs-container">
+                    <div class="mobile-feature-selector">
+                        <div class="selector-trigger" id="selectorTrigger">
+                            <span id="currentSelectionName">Explorar Funciones</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="selector-dropdown" id="selectorDropdown">
+                            <div class="selector-option active" data-target="panel-principal">Funciones Básicas GOLD <i>(Incluidas)</i></div>
+                            <div class="selector-option" data-target="panel-ia">GNIA Gastronomic Assistant <i>(IA)</i></div>
+                            <div class="selector-option" data-target="panel-migracion-insumos">De Excel a GNIA Migración de Insumos</div>
+                            <div class="selector-option" data-target="panel-migracion-datos">Migración Personalizada de Datos <i>(Costo Adicional)</i></div>
+                            <div class="selector-option" data-target="panel-pos">Sistema de Facturación (POS)</div>
+                            <div class="selector-option" data-target="panel-mise-en-place">Mise en place predictivo</div>
+                            <div class="selector-option" data-target="panel-full-service">Modo Full Service</div>
+                            <div class="selector-option" data-target="panel-kds">Pantallas KDS</div>
+                            <div class="selector-option" data-target="panel-domicilios">Sistemas de Domicilios y Gestión de Pedidos</div>
+                            <div class="selector-option" data-target="panel-facturacion">Facturación electrónica DIAN <i>(Solo COL)</i></div>
+                            <div class="selector-option" data-target="panel-delivery">Delivery Web Shop personalizable <i>(Tienda Web)</i></div>
+                            <div class="selector-option" data-target="panel-strategist">GNIA Strategist <i>(I.A. Tienda Web)</i></div>
+                        </div>
+                    </div>
+
+                    <div class="feature-tabs-grid">
+                        <div class="feature-tab active" data-target="panel-principal">
+                            <h3 class="text-ruby">Funciones Básicas GOLD <small><i>(Incluidas)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-ia">
+                            <h3 class="text-ruby">GNIA Gastronomic Assistant <small><i>(IA)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-migracion-insumos">
+                            <h3 class="text-ruby">De Excel a GNIA Migración de Insumos</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-migracion-datos">
+                            <h3 class="text-ruby">Migración Personalizada de Datos <small><i>(Costo Adicional)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-pos">
+                            <h3 class="text-ruby">Sistema de Facturación (POS)</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-mise-en-place">
+                            <h3 class="text-ruby">Mise en place predictivo</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-full-service">
+                            <h3 class="text-ruby">Modo Full Service</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-kds">
+                            <h3 class="text-ruby">Pantallas KDS</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-domicilios">
+                            <h3 class="text-ruby">Sistemas de Domicilios y Gestión de Pedidos</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-facturacion">
+                            <h3 class="text-ruby">Facturación electrónica DIAN <small><i>(Solo COL)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-delivery">
+                            <h3 class="text-ruby">Delivery Web Shop personalizable <small><i>(Tienda Web)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-strategist">
+                            <h3 class="text-ruby">GNIA Strategist <small><i>(I.A. Tienda Web)</i></small></h3>
+                        </div>
+                    </div> <!-- CIERRE CORRECTO DE feature-tabs-grid -->
+
+                    <div class="feature-display-area">
+
+                        <!-- 1. Funciones Básicas GOLD -->
+                        <div class="feature-display-panel active" id="panel-principal">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">El Plan ELITE hereda toda la potencia operativa del Plan GOLD, incluyendo la gestión ilimitada de inventarios, producción digital, control de caja y facturación POS. Es la base sólida sobre la cual construimos una capa superior de inteligencia de negocio y automatización avanzada para su restaurante.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-1" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-1">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. GNIA Gastronomic Assistant (IA) -->
+                        <div class="feature-display-panel" id="panel-ia">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Su propia consultora gastronómica disponible 24/7. Nuestra IA avanzada no solo responde dudas, sino que analiza sus recetas y costos para sugerir mejoras de rentabilidad, proponer variaciones de menú basadas en tendencias y asistirle en cada decisión estratégica de su cocina.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-2" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-2">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. De Excel a GNIA Migración de Insumos -->
+                        <div class="feature-display-panel" id="panel-migracion-insumos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Digitalice su despensa en minutos. Olvídese del registro manual tedioso; con nuestra herramienta de migración masiva, puede importar miles de insumos directamente desde sus hojas de cálculo de Excel preservando unidades, mermas y categorías con total precisión.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-3" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-3">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Migración Personalizada de Datos -->
+                        <div class="feature-display-panel" id="panel-migracion-datos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Un servicio exclusivo de acompañamiento técnico. Si su negocio ya cuenta con una base de datos compleja o migra desde otro sistema POS, nuestro equipo especializado se encarga de la transición total, asegurando que su historial y flujo operativo se mantengan intactos en la plataforma GNIA.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-4" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-4">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Sistema de Facturación (POS) -->
+                        <div class="feature-display-panel" id="panel-pos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Rapidez impecable en el punto de venta. Nuestro sistema POS está optimizado para flujos de alta demanda, permitiendo facturar a una velocidad superior mientras sincroniza ventas en tiempo real con inventarios y reportes financieros automáticos.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-5" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-5">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Mise en place predictivo -->
+                        <div class="feature-display-panel" id="panel-mise-en-place">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Anticípese a la demanda y reduzca el desperdicio. Utilizando algoritmos de inteligencia predictiva, GNIA le indica exactamente cuánto debe producir de cada base o ingrediente para el servicio del día, basándose en su historial de ventas y proyecciones dinámicas.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-6" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-6">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Modo Full Service -->
+                        <div class="feature-display-panel" id="panel-full-service">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Gestione salones complejos con la maestría de un experto. El Modo Full Service permite la gestión dinámica de mesas en tiempo real, asignación de meseros por zonas, comandas múltiples y cuentas separadas, todo bajo una interfaz táctil fluida diseñada para evitar errores durante el servicio.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-7" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-7">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Pantallas KDS -->
+                        <div class="feature-display-panel" id="panel-kds">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Elimine el papel y sincronice su cocina. El Sistema de Pantallas de Cocina (KDS) organiza las órdenes por tiempo de llegada y prioridad, alertando a sus cocineros sobre preparaciones pendientes y notificando al servicio en cuanto un plato está listo para salir.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-8" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-8">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. Sistemas de Domicilios y Gestión de Pedidos -->
+                        <div class="feature-display-panel" id="panel-domicilios">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Centralice sus pedidos externos sin caos. Gestione domicilios propios y flujos de pedidos externos en un solo lugar, permitiendo rastrear el estado de cada entrega y consolidar todas sus fuentes de ingreso en un reporte de ventas unificado.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-9" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-9">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10. Facturación electrónica DIAN -->
+                        <div class="feature-display-panel" id="panel-facturacion">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Cumplimiento legal automático y sin fricciones. Integrado directamente con la normativa DIAN (COL), GNI.A. emite facturas electrónicas válidas legalmente en cada venta que lo requiera, simplificando su contabilidad y evitando sanciones legales.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-10" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-10">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 11. Delivery Web Shop personalizable -->
+                        <div class="feature-display-panel" id="panel-delivery">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Su restaurante abierto al mundo digital 24/7. Obtenga una tienda web propia y totalmente personalizable donde sus clientes pueden ver su menú, realizar pedidos directamente y pagar en línea, todo integrado automáticamente con sus inventarios y cocina.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-11" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-11">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12. GNIA Strategist (I.A. Tienda Web) -->
+                        <div class="feature-display-panel" id="panel-strategist">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Marketing guiado por datos para su tienda virtual. Nuestra IA estratega analiza el comportamiento de compra de sus usuarios en la web para sugerir promociones dinámicas, platos recomendados y optimizaciones de menú que incrementan el ticket promedio de compra por cliente.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-12" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIAFullService.webp?alt=media&token=2192db9b-1a86-4afa-baa5-587b5cd648bb" class="feature-img active feature-img-glow-ruby" loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroELITE%2FGNIACocinaProfesional.webp?alt=media&token=93d68b5d-cb24-4d59-b399-8939ae522513" class="feature-img feature-img-glow-ruby" loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-12">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="section-padding text-center">
+            <div class="container">
+                <div class="glass-card glow-gold" style="padding: 60px 20px;">
+                    <h2 class="section-title text-gradient-gold" style="margin-bottom: 30px;">¿Listo para digitalizar tu
+                        cocina?</h2>
+                    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                        <button class="btn-primary btn-cta-gold" style="font-size: 1.2rem; padding: 15px 40px;">
+                            Inicia DEMO
+                        </button>
+                        <a href="https://play.google.com/store/apps" class="btn-primary btn-cta-gold"
+                            style="font-size: 1.2rem; padding: 15px 40px;" target="_blank">
+                            Descarga Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interface Themes Section -->
+        <section class="section-padding text-center">
+            <div class="container">
+                <h3 class="section-title text-gradient-gold themes-section-title" style="margin-bottom: 50px;">Disfruta
+                    sus 3 Temas para la
+                    Interfaz</h3>
+
+                <div class="themes-grid">
+                    <!-- Natural Theme -->
+                    <div class="theme-col theme-natural">
+                        <h4 class="theme-title">Natural</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoNatural.webp?alt=media&token=f9586e18-43c5-48b5-a1e7-772a25d7bfd6"
+                                alt="Tema Natural" class="theme-img">
+                        </div>
+                    </div>
+
+                    <!-- Claro Theme -->
+                    <div class="theme-col theme-claro">
+                        <h4 class="theme-title">Claro</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoClaro.webp?alt=media&token=223a5af4-eeed-4ca6-afa7-caf96ddfbc06"
+                                alt="Tema Claro" class="theme-img">
+                        </div>
+                    </div>
+
+                    <!-- Oscuro Theme -->
+                    <div class="theme-col theme-oscuro">
+                        <h4 class="theme-title">Oscuro</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoOscuro.webp?alt=media&token=f1d5d048-7cbb-457a-aa4f-f3df34243098"
+                                alt="Tema Oscuro" class="theme-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Sections -->
+            <div class="footer-col">
+                <h4 class="footer-title">Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#hero">Inicio</a></li>
+                    <li><a href="index.html#profiles">Chef Independiente</a></li>
+                    <li><a href="index.html#profiles">Restaurantes Pequeños</a></li>
+                    <li><a href="index.html#profiles">Restaurantes Medianos y Grandes</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Funciones -->
+            <div class="footer-col">
+                <h4 class="footer-title">Funciones</h4>
+                <ul class="footer-links">
+                    <li><a href="features-free.html">PLAN FREE/DEMO</a></li>
+                    <li><a href="features-flash.html">PLAN FLASH</a></li>
+                    <li><a href="features-pro.html">PLAN PRO</a></li>
+                    <li><a href="features-gold.html">PLAN GOLD</a></li>
+                    <li><a href="features-elite.html">PLAN ELITE</a></li>
+                    <li><a href="features-enterprise.html">PLAN ENTERPRISE</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Additional Pages -->
+            <div class="footer-col">
+                <h4 class="footer-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="pricing.html">Precios</a></li>
+                    <li><a href="skool.html">GNIA Skool</a></li>
+                    <li><a href="success-stories.html">Casos de Éxito</a></li>
+                    <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact & Social -->
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-title">Conecta con Nosotros</h4>
+                <a href="index.html#contact" class="btn-primary footer-contact-btn">Ponte en Contacto</a>
+
+                <div class="footer-social-wrapper">
+                    <a href="https://wa.me/yournumber" class="social-icon whatsapp" target="_blank"
+                        aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12.031 6.172c-2.32 0-4.591 1.399-4.591 4.382 0 1.563.813 3.126 2.086 4.054l-.546 2.016 2.112-.533c.312.072.634.111.966.111 2.321 0 5.488-1.742 5.488-5.322 0-3.321-2.946-4.708-5.515-4.708zm0 7.824c-.201 0-.398-.026-.546-.06l-1.127.285.293-1.076c-.846-.664-1.393-1.666-1.393-2.671 0-2.115 1.493-3.23 3.235-3.23 1.742 0 3.325.96 3.325 3.15-.001 2.361-2.188 3.553-3.787 3.553l-.001-.001zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 18c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+                        </svg>
+                    </a>
+
+                    <div class="social-icons-grid">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4.001 1.791 4.001 4c0 2.21-1.791 4-4.001 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31 0 2.591.233 3.812.63.111.035.191.139.191.257v4.692c0 .121-.081.227-.2.257-1.129.331-2.313.483-3.084.55v6.522c0 1.838-1.491 3.329-3.328 3.329-1.837 0-3.328-1.491-3.328-3.329 0-1.838 1.491-3.329 3.328-3.329.35 0 .685.056 1 .158v-4.43c-1.493-.42-3.07-.638-4.672-.638V0c1.602 0 3.178.218 4.672.638s2.887 1.054 4.09 1.89c.812-1.636 2.479-2.528 4.09-2.528h-.18z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>GNIA Gastronomic Neural IA &copy; 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content-img" id="modalImg">
+    </div>
+
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/features.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+/* Shared Styles for Features Pages */
+html {
+    scroll-behavior: smooth;
+}
+
+.feature-slider {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #000;
+}
+
+.feature-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
+}
+
+.feature-img.active {
+    opacity: 1;
+}
+
+/* Feature Slider Utilities */
+.feature-slider.slider-transparent {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-slider.slider-transparent .feature-img {
+    object-fit: contain !important;
+    max-height: 90%;
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.feature-img-glow-gold {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)) !important;
+}
+
+/* Premium Expand Button */
+.expand-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-expand-slider {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.btn-expand-slider:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.4);
+    color: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-img.active {
+    opacity: 1;
+}
+
+.section-subtitle-large {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.interact-subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: -15px;
+    margin-bottom: 30px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- CENTER TAB MODE (New Experimental UI) --- */
+.center-tab-mode {
+    position: relative;
+    z-index: 100;
+    /* Higher priority than general sections */
+    overflow: visible !important;
+}
+
+.center-tab-mode .feature-tabs-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    z-index: 500;
+    /* Ensure container is above next sections */
+    overflow: visible !important;
+}
+
+.center-tab-mode .feature-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+@media (min-width: 1025px) {
+    .center-tab-mode .feature-tabs-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-rows: repeat(2, auto);
+        gap: 12px;
+    }
+}
+
+.center-tab-mode .feature-tab {
+    background: #0f172a;
+    border: 1px solid rgba(var(--plan-color-rgb), 0.1);
+    border-radius: 50px;
+    /* Estilo píldora */
+    padding: 10px 15px;
+    /* Compacted */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    user-select: none;
+    min-height: 52px;
+    /* Balanced height */
+    /* Efecto Biselado mas detallado */
+    box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.5),
+        -3px -3px 8px rgba(255, 255, 255, 0.04),
+        inset 0 0 0 rgba(var(--plan-color-rgb), 0);
+}
+
+.center-tab-mode .feature-tab:hover {
+    transform: translateY(-2px) scale(1.01);
+    border-color: rgba(var(--plan-color-rgb), 0.3);
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.6),
+        -4px -4px 10px rgba(255, 255, 255, 0.06);
+}
+
+.center-tab-mode .feature-tab.active {
+    background: #0f172a;
+    border-color: rgba(var(--plan-color-rgb), 0.5);
+    /* Efecto "Presionado" refinado */
+    box-shadow:
+        inset 4px 4px 8px rgba(0, 0, 0, 0.8),
+        inset -3px -3px 6px rgba(var(--plan-color-rgb), 0.1),
+        0 0 15px rgba(var(--plan-color-rgb), 0.08);
+    transform: translateY(1px) scale(0.99);
+}
+
+.center-tab-mode .feature-tab h3 {
+    margin: 0 !important;
+    font-size: 15px !important;
+    /* Tamaño balanceado V7 */
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    line-height: 1.2 !important;
+}
+
+.center-tab-mode .feature-tab.active h3 {
+    color: var(--plan-color) !important;
+    text-shadow: 0 0 8px rgba(var(--plan-color-rgb), 0.3);
+}
+
+.center-tab-mode .feature-tab h3 small {
+    font-size: 0.80rem !important;
+    /* Ajuste solicitado: más grande para visibilidad */
+    /* Especificación exacta V7 (aprox 9px) */
+    font-weight: 400 !important;
+    font-style: italic !important;
+    opacity: 0.65 !important;
+    /* Legible pero subordinado */
+    margin: 3px auto 0 !important;
+    display: block !important;
+    line-height: 1 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.center-tab-mode .feature-tab h3 small i {
+    font-size: inherit !important;
+    /* Forzar herencia para evitar conflicto con la regla de iconos abajo */
+    font-style: italic !important;
+}
+
+.center-tab-mode .feature-tab>i {
+    /* Selector específico para iconos, no subtextos */
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.center-tab-mode .feature-tab.active i {
+    display: none;
+}
+
+.center-tab-mode .feature-display-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    min-height: 400px;
+    display: none;
+    animation: contentFadeIn 0.5s ease;
+    box-shadow: 0 0 30px rgba(var(--plan-color-rgb), 0.05);
+    /* Faint ambient glow */
+    position: relative;
+    overflow: visible;
+    transition: box-shadow 0.5s ease;
+}
+
+.center-tab-mode .feature-display-panel.switching {
+    animation: contentFadeIn 0.5s ease, panelPulseGlow 0.8s ease;
+}
+
+@keyframes panelPulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(var(--plan-color-rgb), 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(var(--plan-color-rgb), 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 30px rgba(var(--plan-color-rgb), 0.05);
+    }
+}
+
+.center-tab-mode .feature-display-panel.active {
+    display: flex;
+    flex-direction: row;
+    /* Desktop horizontal */
+    align-items: center;
+    gap: 40px;
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.center-tab-mode .panel-text-content {
+    flex: 1.2;
+    text-align: left;
+}
+
+.center-tab-mode .panel-visual-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-tab-mode .feature-display-panel .accordion-desc {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- Mobile Feature Selector Styles --- */
+.mobile-feature-selector {
+    display: none;
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+    /* Absolute top priority */
+}
+
+.selector-trigger {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--plan-color-rgb), 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--plan-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-feature-selector.open .selector-trigger i {
+    transform: rotate(180deg);
+}
+
+.selector-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    border: 1px solid rgba(var(--plan-color-rgb), 0.2);
+    border-radius: 12px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    animation: dropdownSlideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10000;
+}
+
+.mobile-feature-selector.open .selector-dropdown {
+    display: flex;
+}
+
+.selector-option {
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px !important;
+    /* Consistente con desktop */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+/* Ensure subtext in mobile selector is small and italic */
+.selector-option i,
+.selector-trigger i.subtext,
+.selector-trigger .subtext {
+    font-size: 0.80rem !important;
+    /* Standarizado con desktop */
+    /* Reducido para móvil */
+    /* Especificación exacta de V7 */
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.6;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.selector-option:hover,
+.selector-option.active {
+    background: rgba(var(--plan-color-rgb), 0.1);
+    color: var(--plan-color);
+}
+
+@keyframes dropdownSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Queries */
+@media (max-width: 1024px) {
+    .center-tab-mode .feature-display-panel.active {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .center-tab-mode .panel-text-content {
+        order: 1;
+    }
+
+    .center-tab-mode .panel-visual-content {
+        order: 2;
+        width: 100%;
+    }
+
+    .center-tab-mode .panel-text-content {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-subtitle-large {
+        font-size: 1.5rem;
+    }
+
+    .accordion-grid,
+    .center-tab-mode .feature-tabs-grid {
+        display: none !important;
+    }
+
+    .center-tab-mode .feature-display-panel {
+        padding: 25px 15px;
+    }
+
+    .mobile-feature-selector {
+        display: block !important;
+    }
+}

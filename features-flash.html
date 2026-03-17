@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GNIA Plan FLASH - Agilidad y precisión para Chefs Privados y Personales.">
+    <title>PLAN FLASH | GNIA</title>
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/sections.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/styles/features.css">
+    <style>
+        :root {
+            --plan-color: #10b981;
+            /* Emerald for selection effect */
+            --plan-color-rgb: 16, 185, 129;
+        }
+
+        @media (min-width: 1025px) {
+            .center-tab-mode .feature-tabs-grid {
+                grid-template-columns: repeat(5, 1fr) !important;
+                /* Force 5 columns for symmetry with 10 functions */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-container">
+                <img src="src/assets/logo-v2.png" alt="GNIA Logo" class="logo-img">
+            </a>
+            <nav class="nav-menu desktop-only">
+                <div class="nav-item-dropdown">
+                    <a href="index.html#hero" class="nav-link">Funciones ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="features-free.html" class="dropdown-item hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="dropdown-item hover-emerald">PLAN FLASH</a>
+                        <a href="features-pro.html" class="dropdown-item hover-blue">PLAN PRO</a>
+                        <a href="features-gold.html" class="dropdown-item hover-gold">PLAN GOLD</a>
+                        <a href="features-elite.html" class="dropdown-item hover-ruby">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="dropdown-item hover-tornasol">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="nav-link">Precios</a>
+                <a href="skool.html" class="nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="nav-link">Casos de Éxito</a>
+            </nav>
+            <div class="header-actions desktop-only">
+                <button class="btn-neutral">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    Iniciar Sesión
+                </button>
+                <a href="index.html#contact" class="btn-cta-gold-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16" style="margin-right: 5px;">
+                        <path
+                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+                    Asesorías
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-drawer">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-toggle" id="mobileFunctionsToggle">
+                        <span>Funciones</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="mobile-submenu" id="mobileFunctionsSubmenu">
+                        <a href="features-free.html" class="mobile-submenu-link hover-glass">PLAN FREE/DEMO</a>
+                        <a href="features-flash.html" class="mobile-submenu-link">PLAN FLASH</a>
+                        <a href="features-pro.html" class="mobile-submenu-link">PLAN PRO</a>
+                        <a href="features-gold.html" class="mobile-submenu-link">PLAN GOLD</a>
+                        <a href="features-elite.html" class="mobile-submenu-link">PLAN ELITE</a>
+                        <a href="features-enterprise.html" class="mobile-submenu-link">PLAN ENTERPRISE</a>
+                    </div>
+                </div>
+                <a href="pricing.html" class="mobile-nav-link">Precios</a>
+                <a href="skool.html" class="mobile-nav-link">GNIA Skool</a>
+                <a href="success-stories.html" class="mobile-nav-link">Casos de Éxito</a>
+                <div class="mobile-actions">
+                    <button class="btn-neutral full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        Iniciar Sesión
+                    </button>
+                    <a href="index.html#contact" class="btn-cta-gold-header full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16" style="margin-right: 5px;">
+                            <path
+                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                        </svg>
+                        Asesorías
+                    </a>
+                </div>
+            </nav>
+        </div>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="min-height: 85vh; padding-top: 150px;">
+            <div class="hero-slider hero-video" id="hero-slider" data-interval="2000">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FChefPrivado.webp?alt=media&token=3f43665e-6c56-44d4-ad58-15688f552470"
+                    class="hero-img active" alt="Chef Privado">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FChefPersonal1.webp?alt=media&token=02a73c75-a173-4ae1-b6e3-1ab9af932a16"
+                    class="hero-img" alt="Chef Personal 1">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FGNIAcocinaChefpersonal.webp?alt=media&token=c6acfe02-fc18-416f-a212-65c383b29469"
+                    class="hero-img" alt="GNIA Cocina Chef Personal">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FChefPersonal.webp?alt=media&token=f0285126-c929-4ae7-99c1-4f282c1e06c1"
+                    class="hero-img" alt="Chef Personal">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FChefCompras.webp?alt=media&token=3ab893ca-ee25-4df3-953a-5f7d9f7e0cd5"
+                    class="hero-img" alt="Chef Compras">
+                <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFLASH%2FChefPrivado1.webp?alt=media&token=d4f0f13e-c3f7-4172-8bcf-3d2afd0838ff"
+                    class="hero-img" alt="Chef Privado 1">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container" style="position: relative; z-index: 2; text-align: center;">
+                <h1 class="hero-title" style="max-width: 900px; margin: 0 auto 20px; line-height: 1.2;">
+                    Eleva tu nivel de servicio como Chef Privado y <span class="text-gradient-gold">asegura tu
+                        rentabilidad.</span>
+                </h1>
+                <h2
+                    style="color: #fff; font-size: 1.5rem; font-weight: 400; max-width: 750px; margin: 0 auto 40px; opacity: 0.9;">
+                    Gestiona tus eventos, costea con precisión y atiende como un profesional.
+                </h2>
+                <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                    <a href="index.html#contact" class="btn-primary btn-cta-gold">
+                        <i class="bi bi-pc-display" style="margin-right: 8px;"></i>
+                        Iniciar DEMO
+                    </a>
+                    <a href="pricing.html" class="btn-primary btn-cta-gold">
+                        <i class="bi bi-phone" style="margin-right: 8px;"></i>
+                        Descargar Gratis
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlighted Text Section -->
+        <section class="features-section plan-emerald center-tab-mode">
+            <div class="container">
+                <div class="features-intro">
+                    <div class="intro-text-wrapper">
+                        <h3 class="intro-title">
+                            Diseñado exclusivamente para Chefs Privados y Chefs Personales.
+                        </h3>
+                        <p class="intro-text">
+                            Deja de perder tiempo valioso armando presupuestos en Excel o calculando "a ojo" para tus
+                            clientes exclusivos. Con el Plan Flash de GNIA, transformarás la forma en que gestionas tus
+                            eventos privados, asegurando márgenes de ganancia exactos, estandarizando tus creaciones y
+                            entregando cotizaciones y cuentas de cobro de primer nivel.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle-large text-gradient-gold">¿Que podras hacer en GNIA con el Plan FLASH?</h2>
+                <p class="interact-subtitle"><i>Explorar Funciones</i></p>
+
+                <div class="feature-tabs-container">
+                    <div class="mobile-feature-selector">
+                        <div class="selector-trigger" id="selectorTrigger">
+                            <span id="currentSelectionName">Explorar Funciones</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="selector-dropdown" id="selectorDropdown">
+                            <div class="selector-option active" data-target="panel-principal">Panel Principal</div>
+                            <div class="selector-option" data-target="panel-costeo">Costeo de Insumos <i>(Ilimitado)</i></div>
+                            <div class="selector-option" data-target="panel-recetas">Panel de Recetas <i>(Ilimitado)</i></div>
+                            <div class="selector-option" data-target="panel-catalogos">Catálogos Profesionales <i>(Ilimitado)</i></div>
+                            <div class="selector-option" data-target="panel-cotizaciones">Cotizaciones Canva <i>(3 Max)</i></div>
+                            <div class="selector-option" data-target="panel-compras">Listados de compras automáticos</div>
+                            <div class="selector-option" data-target="panel-ia">GNIA Gastronomic Assistant <i>(IA)</i></div>
+                            <div class="selector-option" data-target="panel-subrecetas">Crear Sub Recetas y Adiciones</div>
+                            <div class="selector-option" data-target="panel-combos">Combos y Adiciones</div>
+                            <div class="selector-option" data-target="panel-migracion">Migración Personalizada de Datos <i>(Costo Adicional)</i></div>
+                        </div>
+                    </div>
+
+                    <div class="feature-tabs-grid">
+                        <div class="feature-tab active" data-target="panel-principal">
+                            <h3 class="text-gold">Panel Principal</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-costeo">
+                            <h3 class="text-gold">Costeo de Insumos <small><i>(Ilimitado)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-recetas">
+                            <h3 class="text-gold">Panel de Recetas <small><i>(Ilimitado)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-catalogos">
+                            <h3 class="text-gold">Catálogos Profesionales <small><i>(Ilimitado)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-cotizaciones">
+                            <h3 class="text-gold">Cotizaciones Canva <small><i>(3 Max)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-compras">
+                            <h3 class="text-gold">Listados de compras automáticos</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-ia">
+                            <h3 class="text-gold">GNIA Gastronomic Assistant <small><i>(IA)</i></small></h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-subrecetas">
+                            <h3 class="text-gold">Crear Sub Recetas y Adiciones</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-combos">
+                            <h3 class="text-gold">Combos y Adiciones</h3>
+                        </div>
+                        <div class="feature-tab" data-target="panel-migracion">
+                            <h3 class="text-gold">Migración Personalizada de Datos <small><i>(Costo Adicional)</i></small></h3>
+                        </div>
+                    </div>
+
+                    <div class="feature-display-area">
+
+                        <!-- 1. Panel Principal -->
+                        <div class="feature-display-panel active" id="panel-principal">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Ten a primera vista tu nivel como Chef y la salud financiera
+                                    de tu
+                                    negocio independiente. Desde este panel central, tendrás accesos directos para crear
+                                    con
+                                    un solo clic tus insumos, recetas, menús y cotizaciones. Además, podrás gestionar tu
+                                    carrito de compras y acceder rápidamente a la I.A. de GNI.A., tu asistente de
+                                    Inteligencia
+                                    Artificial. Ten todo el control operativo de tus eventos privados en un solo lugar.
+                                </p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-panel" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy" width="1200" height="800">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy" width="1200" height="800">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy" width="1200" height="800">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-panel">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Costeo de Insumos -->
+                        <div class="feature-display-panel" id="panel-costeo">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Elimina el miedo a cobrar lo que deberías por tus eventos.
+                                    Este panel digital te permite registrar todos tus ingredientes detallando cantidad,
+                                    unidad de medida, categoría, valor de compra, imagen y la crucial merma. Utiliza sus
+                                    filtros inteligentes para organizar tu despensa digital y proteger tu rentabilidad
+                                    desde la base en cada cena o evento que organices.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-costeo" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-costeo">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Panel de Recetas -->
+                        <div class="feature-display-panel" id="panel-recetas">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Estandariza tu talento culinario y asegura tu ganancia real en
+                                    cada plato servido. Crea recetas sin límite, ya sean platos individuales o recetas
+                                    de producción grande para tus eventos. Agrega a cada receta, una foto llamativa,
+                                    nombre, estilo culinario, tipo de plato, descripción de venta, alertas de alérgenos,
+                                    los insumos exactos, el paso a paso estandarizado y el precio que le darás GNI.A.
+                                    realiza el cálculo automático de tu rentabilidad. Además te permite crear bebidas
+                                    preparadas (cócteles, jugos, cafés) o procesadas (gaseosas, cervezas), dándote el
+                                    control total de tu menú.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-recetas" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-recetas">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 5. Catálogos Profesionales -->
+                        <div class="feature-display-panel" id="panel-catalogos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Despierta el deseo de tus clientes antes del primer bocado.
+                                    Arma menús personalizados y compártelos mediante un enlace privado, que llevara a un
+                                    Catalogo Gastronómico optimizado para enseñar tu gastronomía. Proyecta una imagen de
+                                    alto nivel que justifique tus tarifas premium y eleve el estatus de tu marca
+                                    personal como Chef Privado/Personal.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-catalogos"
+                                    data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-catalogos">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Cotizaciones Canva -->
+                        <div class="feature-display-panel" id="panel-cotizaciones">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Cierra más eventos demostrando un profesionalismo absoluto
+                                    desde el primer contacto. Genera cotizaciones interactivas y visualmente atractivas
+                                    (estilo Canva) para especificar todos los detalles de tu servicio. El sistema además
+                                    guardará el historial de los servicios prestados y los gustos específicos de tus
+                                    clientes, permitiéndote ofrecer experiencias ultra personalizadas que garantizan su
+                                    fidelidad.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-cotizaciones"
+                                    data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-cotizaciones">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Listados de compras -->
+                        <div class="feature-display-panel" id="panel-compras">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Libérate del estrés de olvidar ingredientes clave a la hora de
+                                    mercar para un evento importante. GNI.A. envía automáticamente los insumos que
+                                    necesitas directamente al carrito de compras, o si lo prefieres, permite añadirlos
+                                    manualmente. Navega por los pasillos o mercados con un panel interactivo y
+                                    checkeable en tu dispositivo para marcar los insumos a medida que los adquieres.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-compras" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-compras">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Pedidos a proveedores -->
+                        <div class="feature-display-panel" id="panel-pedidos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Simplifica tus abastecimientos y ahorra horas valiosas de
+                                    gestión antes de cada evento. Envía las solicitudes de compra a tus proveedores
+                                    directamente por WhatsApp con un solo clic. Tu proveedor verificara y checkeara cada
+                                    uno de los insumos pedidos, al finalizar te podrá enviar una alerta para avisarte
+                                    que el pedido va en camino.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-pedidos" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-pedidos">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. GNIA Gastronomic Assistant -->
+                        <div class="feature-display-panel" id="panel-ia">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Apoyate en un Experto Gastronómico capaz de recomendarte menús
+                                    y
+                                    propuestas para impactar clientes potenciales, tu le das la idea ella te da las
+                                    mejores
+                                    recomendaciones para tus platos.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-ia" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy" width="1200" height="800">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-ia">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10. Crear Sub Recetas y Adiciones -->
+                        <div class="feature-display-panel" id="panel-subrecetas">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Maximiza la eficiencia de tu producción culinaria estandarizando preparaciones base. Crea sub-recetas (salsas, fondos, emulsiones) que podrás insertar dentro de tus recetas finales. GNI.A. calculará automáticamente el impacto de cada sub-preparación en el costo total de tus platos de autor.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-subrecetas" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy" width="1200" height="800">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-subrecetas">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 11. Combos y Adiciones -->
+                        <div class="feature-display-panel" id="panel-combos">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">Aumenta tu ticket promedio permitiendo que tus clientes personalicen sus experiencias culinarias. Configura opciones adicionales o complementos para tus platos y crea ofertas combinadas que faciliten la venta y mejoren la rentabilidad de cada servicio prestado.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-combos" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy" width="1200" height="800">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-combos">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12. Migración Personalizada de Datos -->
+                        <div class="feature-display-panel" id="panel-migracion">
+                            <div class="panel-text-content">
+                                <p class="accordion-desc">No empieces desde cero. Nuestro equipo de soporte especializado te ayuda a trasladar toda tu información gastronómica (insumos, proveedores, recetas base) a la plataforma GNI.A. Digitaliza tu historial culinario de manera segura y profesional para que puedas empezar a operar con tu plan Flash de inmediato.</p>
+                            </div>
+                            <div class="panel-visual-content">
+                                <div class="feature-slider slider-transparent" id="slider-migracion" data-interval="1500">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        class="feature-img active feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FAccesosDirectos.webp?alt=media&token=54f9ec3f-4251-4f60-8b5c-55874ae4593b"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FNiveles.webp?alt=media&token=9e4ea8f3-921c-4067-bf33-adf39e162407"
+                                        loading="lazy">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        class="feature-img feature-img-glow-gold"
+                                        data-img="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FCarruseles-Hero-Planes%2FHeroFREE%2FFREE-PNGs%2FRentabilidad.webp?alt=media&token=fbb10bcd-6a4f-400f-b88c-9b66bb24213b"
+                                        loading="lazy" width="1200" height="800">
+                                </div>
+                                <div class="expand-container">
+                                    <button class="btn-expand-slider" data-target="slider-migracion">
+                                        <i class="bi bi-arrows-angle-expand"></i>
+                                        Expandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <!-- CTA Section -->
+        <section class="section-padding text-center">
+            <div class="container">
+                <div class="glass-card glow-gold" style="padding: 60px 20px;">
+                    <h2 class="section-title text-gradient-gold" style="margin-bottom: 30px;">¿Listo para digitalizar tu
+                        cocina?</h2>
+                    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                        <button class="btn-primary btn-cta-gold" style="font-size: 1.2rem; padding: 15px 40px;">
+                            Inicia DEMO
+                        </button>
+                        <a href="https://play.google.com/store/apps" class="btn-primary btn-cta-gold"
+                            style="font-size: 1.2rem; padding: 15px 40px;" target="_blank">
+                            Descarga Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interface Themes Section -->
+        <section class="section-padding text-center">
+            <div class="container">
+                <h3 class="section-title text-gradient-gold themes-section-title" style="margin-bottom: 50px;">Disfruta
+                    sus 3 Temas para la
+                    Interfaz</h3>
+
+                <div class="themes-grid">
+                    <!-- Natural Theme -->
+                    <div class="theme-col theme-natural">
+                        <h4 class="theme-title">Natural</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoNaturalChef.webp?alt=media&token=9a6a1029-7bfd-4af0-a0a5-b1fa3cf68883"
+                                alt="Tema Natural" class="theme-img">
+                        </div>
+                    </div>
+
+                    <!-- Claro Theme -->
+                    <div class="theme-col theme-claro">
+                        <h4 class="theme-title">Claro</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoClaroChef.webp?alt=media&token=e8948798-95a7-4fb2-8f43-7620948596a9"
+                                alt="Tema Claro" class="theme-img">
+                        </div>
+                    </div>
+
+                    <!-- Oscuro Theme -->
+                    <div class="theme-col theme-oscuro">
+                        <h4 class="theme-title">Oscuro</h4>
+                        <div class="theme-img-wrapper">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FImagenes%20Generales%2FModoOscuroChef.webp?alt=media&token=52045f95-f287-4c6e-98b5-aaa99aa229db"
+                                alt="Tema Oscuro" class="theme-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Sections -->
+            <div class="footer-col">
+                <h4 class="footer-title">Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#hero">Inicio</a></li>
+                    <li><a href="index.html#profiles">Chef Independiente</a></li>
+                    <li><a href="index.html#profiles">Restaurantes Pequeños</a></li>
+                    <li><a href="index.html#profiles">Restaurantes Medianos y Grandes</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Funciones -->
+            <div class="footer-col">
+                <h4 class="footer-title">Funciones</h4>
+                <ul class="footer-links">
+                    <li><a href="features-free.html">PLAN FREE/DEMO</a></li>
+                    <li><a href="features-flash.html">PLAN FLASH</a></li>
+                    <li><a href="features-pro.html">PLAN PRO</a></li>
+                    <li><a href="features-gold.html">PLAN GOLD</a></li>
+                    <li><a href="features-elite.html">PLAN ELITE</a></li>
+                    <li><a href="features-enterprise.html">PLAN ENTERPRISE</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Additional Pages -->
+            <div class="footer-col">
+                <h4 class="footer-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="pricing.html">Precios</a></li>
+                    <li><a href="skool.html">GNIA Skool</a></li>
+                    <li><a href="success-stories.html">Casos de Éxito</a></li>
+                    <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                    <li><a href="terms.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact & Social -->
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-title">Conecta con Nosotros</h4>
+                <a href="index.html#contact" class="btn-primary footer-contact-btn">Ponte en Contacto</a>
+
+                <div class="footer-social-wrapper">
+                    <a href="https://wa.me/yournumber" class="social-icon whatsapp" target="_blank"
+                        aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12.031 6.172c-2.32 0-4.591 1.399-4.591 4.382 0 1.563.813 3.126 2.086 4.054l-.546 2.016 2.112-.533c.312.072.634.111.966.111 2.321 0 5.488-1.742 5.488-5.322 0-3.321-2.946-4.708-5.515-4.708zm0 7.824c-.201 0-.398-.026-.546-.06l-1.127.285.293-1.076c-.846-.664-1.393-1.666-1.393-2.671 0-2.115 1.493-3.23 3.235-3.23 1.742 0 3.325.96 3.325 3.15-.001 2.361-2.188 3.553-3.787 3.553l-.001-.001zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 18c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+                        </svg>
+                    </a>
+
+                    <div class="social-icons-grid">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4.001 1.791 4.001 4c0 2.21-1.791 4-4.001 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31 0 2.591.233 3.812.63.111.035.191.139.191.257v4.692c0 .121-.081.227-.2.257-1.129.331-2.313.483-3.084.55v6.522c0 1.838-1.491 3.329-3.328 3.329-1.837 0-3.328-1.491-3.328-3.329 0-1.838 1.491-3.329 3.328-3.329.35 0 .685.056 1 .158v-4.43c-1.493-.42-3.07-.638-4.672-.638V0c1.602 0 3.178.218 4.672.638s2.887 1.054 4.09 1.89c.812-1.636 2.479-2.528 4.09-2.528h-.18z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>GNIA Gastronomic Neural IA &copy; 2026. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content-img" id="modalImg">
+    </div>
+
+    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/features.js"></script>
+</body>
+
+</html>

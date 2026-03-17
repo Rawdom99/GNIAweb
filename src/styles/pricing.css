@@ -1,0 +1,655 @@
+/* --- Pricing Section --- */
+#pricing {
+    overflow: visible !important;
+    /* Allow currency dropdown to show */
+}
+
+#pricing .container {
+    max-width: 1700px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 50;
+}
+
+/* --- Currency Selector --- */
+.currency-selector-container {
+    position: relative;
+    z-index: 100;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.currency-label {
+    display: block;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --- Pricing Category Tabs --- */
+.pricing-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.pricing-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(12px);
+    color: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.pricing-tab-btn:hover::before {
+    left: 100%;
+}
+
+.pricing-tab-btn:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.15);
+}
+
+.pricing-tab-btn.active {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(184, 134, 11, 0.2));
+    border-color: #FFD700;
+    color: #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 15px rgba(255, 215, 0, 0.05);
+}
+
+.pricing-tab-btn i {
+    font-size: 1.1rem;
+}
+
+/* --- Pricing Panes --- */
+.pricing-pane {
+    display: none;
+    opacity: 0;
+    animation: fadeInPricingPane 0.5s ease forwards;
+}
+
+.pricing-pane.active {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes fadeInPricingPane {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Pricing Grids --- */
+.pricing-grid {
+    display: grid;
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.pricing-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+}
+
+.pricing-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1500px;
+}
+
+@media (max-width: 1024px) {
+    .pricing-tabs-container {
+        gap: 12px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 10px 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Hide scrollbar for tabs */
+    }
+
+    .pricing-tabs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pricing-tab-btn {
+        padding: 12px 15px;
+        font-size: 0.65rem;
+        flex: 0 0 auto;
+        min-width: 140px;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.2;
+        border-radius: 12px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .pricing-tab-btn .tab-icon {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+    }
+
+    .pricing-tab-btn .tab-text {
+        display: block;
+        width: 100%;
+        font-weight: 700;
+        white-space: normal;
+        margin-top: 2px;
+    }
+
+    .pricing-pane {
+        width: 100%;
+        overflow: visible;
+    }
+
+    /* Force horizontal scroll on all pricing grids */
+    .pricing-grid,
+    .pricing-grid-3,
+    .pricing-grid-4 {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory;
+        padding: 20px 20px 50px 20px !important;
+        gap: 20px !important;
+        -webkit-overflow-scrolling: touch;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+        justify-content: flex-start !important;
+    }
+
+    .pricing-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .pricing-grid::-webkit-scrollbar-track {
+        background: rgba(255, 215, 0, 0.05);
+        border-radius: 4px;
+    }
+
+    .pricing-grid::-webkit-scrollbar-thumb {
+        background: rgba(255, 215, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    .pricing-grid .plan-card {
+        flex: 0 0 300px !important;
+        width: 300px !important;
+        max-width: 85vw !important;
+        scroll-snap-align: center;
+        height: auto;
+    }
+}
+
+/* --- Plan Cards --- */
+.plan-card {
+    border-radius: var(--radius-card);
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Plan Badge (Nuevo / Popular) --- */
+.plan-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+    z-index: 2;
+}
+
+/* --- Plan Color Themes --- */
+
+/* FREE - Glassmorphism Transparent */
+.plan-card.free-plan {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #FFFFFF;
+    border-color: rgba(148, 163, 184, 0.25);
+}
+
+.plan-card.free-plan:hover {
+    box-shadow: 0 0 30px rgba(148, 163, 184, 0.2);
+    border-color: rgba(148, 163, 184, 0.5);
+}
+
+/* FLASH - Emerald (previously FREE color) */
+.plan-card.flash-plan {
+    background: linear-gradient(135deg, #022c22 0%, #059669 40%, #10b981 50%, #059669 60%, #022c22 100%);
+    color: #FFFFFF;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.plan-card.flash-plan:hover {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+    border-color: #10b981;
+}
+
+/* PRO - Blue */
+.plan-card.pro-plan {
+    background: linear-gradient(135deg, #020617 0%, #172554 20%, #3b82f6 50%, #1e40af 80%, #020617 100%);
+    color: #FFFFFF;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.plan-card.pro-plan:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+    border-color: #3b82f6;
+}
+
+/* GOLD - Gold */
+.plan-card.gold-plan {
+    background: linear-gradient(135deg, #422006 0%, #b45309 20%, #fcd34d 50%, #b45309 80%, #2a1801 100%);
+    color: #FFFFFF;
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+.plan-card.gold-plan:hover {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+    border-color: #fbbf24;
+}
+
+/* ELITE - Ruby */
+.plan-card.elite-plan {
+    background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 20%, #ef4444 50%, #7f1d1d 80%, #450a0a 100%);
+    color: #FFFFFF;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.plan-card.elite-plan:hover {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+    border-color: #ef4444;
+}
+
+/* ENTERPRISE - Tornasol (Black/Gold Metallic) */
+.plan-card.enterprise-plan {
+    background: linear-gradient(135deg, #000000 0%, #2a2a2a 20%, #b8860b 45%, #ffd700 50%, #b8860b 55%, #2a2a2a 80%, #000000 100%);
+    color: #FFFFFF;
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.plan-card.enterprise-plan:hover {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.3);
+    border-color: #ffd700;
+}
+
+/* --- Plan Content Styling --- */
+.plan-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 25px; /* Added to clear the plan-badge */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    text-align: center;
+}
+
+.plan-subtitle {
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+    min-height: 40px;
+}
+
+/* --- Price Display (Yearly + Monthly) --- */
+.plan-price-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan-price-yearly {
+    font-size: 1.7rem;
+    font-weight: 900;
+    line-height: 1.3;
+    position: relative;
+    display: inline-block;
+}
+
+.plan-price-yearly small {
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.8;
+    display: inline;
+}
+
+.plan-price-monthly {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-top: 6px;
+}
+
+.plan-price-monthly small {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+/* --- Discount Badge --- */
+.discount-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+    vertical-align: super;
+    margin-right: 6px;
+}
+
+/* --- Features List --- */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 30px 0;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    gap: 8px;
+}
+
+.plan-features li strong {
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.plan-features li small {
+    opacity: 0.75;
+    font-size: 0.8em;
+}
+
+.feature-highlight {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 12px !important;
+}
+
+/* --- Plan Button --- */
+.plan-btn {
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px;
+    border-radius: var(--radius-btn);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.plan-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* --- Dual Buttons Wrapper --- */
+.plan-btns-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.plan-btns-wrapper .plan-btn {
+    font-size: 0.85rem;
+    padding: 10px;
+}
+
+/* --- Monthly Equivalent Price (al pagar año) --- */
+.plan-price-monthly-equiv {
+    font-size: 0.82rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-top: 4px;
+    color: #FFD700;
+}
+
+/* --- Badge Variants --- */
+.plan-badge.badge-coming-soon {
+    background: linear-gradient(135deg, #94a3b8, #64748b);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(148, 163, 184, 0.4);
+}
+
+/* --- Custom Currency Selector --- */
+.custom-currency-selector {
+    position: relative;
+    width: 280px;
+    font-family: var(--font-main);
+    user-select: none;
+    margin: 0 auto;
+}
+
+.selected-currency {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.selected-currency:hover {
+    border-color: #FFD700;
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.selected-currency .flag-icon {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.selected-currency .selected-text {
+    flex: 1;
+    font-weight: 600;
+    color: #FFD700;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.selected-currency .chevron {
+    font-size: 0.7rem;
+    color: #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.custom-currency-selector.open .chevron {
+    transform: rotate(180deg);
+}
+
+.currency-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 14px;
+    padding: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.custom-currency-selector.open .currency-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.currency-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.currency-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.currency-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+}
+
+.currency-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.currency-option:hover {
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.currency-option.active {
+    background: #FFD700;
+}
+
+.currency-option .flag-icon {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.currency-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.currency-code {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.currency-name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.currency-option.active .currency-code,
+.currency-option.active .currency-name {
+    color: #0f172a;
+}
+
+.check-icon {
+    font-size: 0.8rem;
+    color: #0f172a;
+    display: none;
+}
+
+.currency-option.active .check-icon {
+    display: block;
+}
