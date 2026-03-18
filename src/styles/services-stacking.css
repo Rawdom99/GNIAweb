@@ -1,176 +1,159 @@
 /* ====================================
-   SERVICES STACKING CARDS - GSAP VERSION
-   Premium Progressive Cover Effect
+   SERVICES SLIDER (Replaced Stacking Cards)
+   Horizontal scrolling gallery with proportional scrollbar/progress indicator.
+   More square-like aesthetic.
    ==================================== */
 
-.services-stack-section {
+.services-slider-section {
     position: relative;
     width: 100%;
     background: #020617;
-    overflow: visible;
-    /* Default: visible. JS adds .stack-gsap-active to switch to clip */
-    z-index: 20;
-    isolation: isolate;
-    /* Isolate stacking context to prevent z-index leaking */
+    padding: 80px 0 100px 0;
+    overflow: hidden;
 }
 
-/* When GSAP initializes successfully, contain the pinned cards */
-.services-stack-section.stack-gsap-active {
-    overflow: clip;
+.services-slider-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-/* FALLBACK: If GSAP fails to load, show cards normally */
-.services-stack-section.stack-fallback .service-stack-panel {
-    position: relative !important;
-    height: auto !important;
-    min-height: auto !important;
-    transform: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-}
-
-.services-stack-section.stack-fallback .service-stack-content {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-}
-
-.services-stack-section.stack-fallback .service-stack-image-wrapper {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-}
-
-/* MOBILE NO-PIN: Stacking disabled, cards flow naturally */
-.services-stack-section.stack-no-pin .service-stack-panel {
-    position: relative !important;
-    height: auto !important;
-    min-height: auto !important;
-    transform: none !important;
-}
-
-.services-stack-section.stack-no-pin .service-stack-content {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-}
-
-.services-stack-section.stack-no-pin .service-stack-image-wrapper {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-}
-
-.services-stack-container {
+.services-slider-wrapper {
     position: relative;
     width: 100%;
 }
 
-.service-stack-panel {
-    position: relative;
-    /* GSAP will handle pinning */
+/* Scroll Progress Bar (Replaces Dots) */
+.services-slider-progress {
     width: 100%;
-    height: 100vh;
-    height: 100dvh; /* Modern: respects dynamic viewport (mobile address bar) */
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-slider-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fcc119;
+    width: 16.666%; /* Default for 6 items */
+    border-radius: 6px;
+    transition: width 0.1s, transform 0.1s;
+}
+
+/* Track for cards */
+.services-slider-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 20px 0 40px 0;
+    scrollbar-width: none; /* Firefox */
+}
+.services-slider-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* Square-like Card Base */
+.service-slide-card {
+    flex: 0 0 calc(33.333% - 20px);
+    /* Making it more square by giving it a specific aspect ratio or fixed height that relates to its width */
+    aspect-ratio: 4/5;
+    min-height: 600px; 
+    
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(15, 23, 42, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-slide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* THEMES AND COLORS */
+/* GOLD CARDS */
+.service-slide-card[data-service="1"],
+.service-slide-card[data-service="4"] {
+    background: linear-gradient(180deg, rgba(180, 83, 9, 0.2) 0%, rgba(15, 23, 42, 0.9) 50%, rgba(180, 83, 9, 0.2) 100%), #01040f;
+    border-color: rgba(252, 211, 77, 0.2);
+}
+.service-slide-card[data-service="1"] .service-slide-badge,
+.service-slide-card[data-service="4"] .service-slide-badge { color: #fcc119; }
+.service-slide-card[data-service="1"] .service-slide-badge::before,
+.service-slide-card[data-service="4"] .service-slide-badge::before { background: #fcc119; }
+
+/* SKY BLUE CARDS */
+.service-slide-card[data-service="2"],
+.service-slide-card[data-service="5"] {
+    background: linear-gradient(180deg, rgba(14, 116, 144, 0.2) 0%, rgba(15, 23, 42, 0.9) 50%, rgba(14, 116, 144, 0.2) 100%), #01040f;
+    border-color: rgba(56, 189, 248, 0.2);
+}
+.service-slide-card[data-service="2"] .service-slide-badge,
+.service-slide-card[data-service="5"] .service-slide-badge { color: #00dcff; }
+.service-slide-card[data-service="2"] .service-slide-badge::before,
+.service-slide-card[data-service="5"] .service-slide-badge::before { background: #00dcff; }
+
+/* RUBY RED CARDS */
+.service-slide-card[data-service="3"],
+.service-slide-card[data-service="6"] {
+    background: linear-gradient(180deg, rgba(127, 29, 29, 0.2) 0%, rgba(15, 23, 42, 0.9) 50%, rgba(127, 29, 29, 0.2) 100%), #01040f;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+.service-slide-card[data-service="3"] .service-slide-badge,
+.service-slide-card[data-service="6"] .service-slide-badge { color: #ef4444; }
+.service-slide-card[data-service="3"] .service-slide-badge::before,
+.service-slide-card[data-service="6"] .service-slide-badge::before { background: #ef4444; }
+
+
+/* Media (Image top half) */
+.service-slide-media {
+    width: 100%;
+    height: 45%; /* Proportion of the "square" */
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 40px;
-    will-change: transform;
+    padding: 30px 30px 0 30px;
+    overflow: hidden;
 }
 
-/* Z-Index Hierarchy for covering effect */
-.service-stack-panel[data-service="1"] {
-    z-index: 1;
-}
-
-.service-stack-panel[data-service="2"] {
-    z-index: 2;
-}
-
-.service-stack-panel[data-service="3"] {
-    z-index: 3;
-}
-
-.service-stack-panel[data-service="4"] {
-    z-index: 4;
-}
-
-.service-stack-panel[data-service="5"] {
-    z-index: 5;
-}
-
-.service-stack-panel[data-service="6"] {
-    z-index: 6;
-}
-
-/* Themes with base colors for depth */
-.service-stack-panel[data-service="1"],
-.service-stack-panel[data-service="4"] {
-    background-color: rgba(18, 12, 5, 0.95);
-    /* Dark gold base */
-}
-
-.service-stack-panel[data-service="2"],
-.service-stack-panel[data-service="5"] {
-    background-color: rgba(5, 12, 18, 0.95);
-    /* Dark blue base */
-}
-
-.service-stack-panel[data-service="3"],
-.service-stack-panel[data-service="6"] {
-    background-color: rgba(18, 5, 5, 0.95);
-    /* Dark ruby base */
-}
-
-/* Glass & Gradients */
-.service-stack-panel {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* GOLD CARDS */
-.service-stack-panel[data-service="1"],
-.service-stack-panel[data-service="4"] {
-    background: linear-gradient(135deg, rgba(180, 83, 9, 0.3) 0%, rgba(252, 211, 77, 0.2) 50%, rgba(180, 83, 9, 0.3) 100%), #01040f;
-    border-top: 1px solid rgba(252, 211, 77, 0.3);
-}
-
-/* SKY BLUE CARDS */
-.service-stack-panel[data-service="2"],
-.service-stack-panel[data-service="5"] {
-    background: linear-gradient(135deg, rgba(14, 116, 144, 0.3) 0%, rgba(56, 189, 248, 0.2) 50%, rgba(14, 116, 144, 0.3) 100%), #01040f;
-    border-top: 1px solid rgba(56, 189, 248, 0.3);
-}
-
-/* RUBY RED CARDS */
-.service-stack-panel[data-service="3"],
-.service-stack-panel[data-service="6"] {
-    background: linear-gradient(135deg, rgba(127, 29, 29, 0.3) 0%, rgba(239, 68, 68, 0.2) 50%, rgba(127, 29, 29, 0.3) 100%), #01040f;
-    border-top: 1px solid rgba(239, 68, 68, 0.3);
-}
-
-/* Content Layout */
-.service-stack-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    max-width: 1400px;
+.service-slide-media img {
     width: 100%;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    transition: transform 0.5s ease;
 }
 
-.service-stack-text {
+.service-slide-card:hover .service-slide-media img {
+    transform: scale(1.05);
+}
+
+/* Content (Bottom half) */
+.service-slide-content {
+    padding: 25px 30px 30px 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 12px;
+    flex-grow: 1;
 }
 
-.service-stack-badge {
+.service-slide-badge {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -179,72 +162,41 @@
     gap: 10px;
 }
 
-.service-stack-badge::before {
+.service-slide-badge::before {
     content: '';
-    width: 30px;
+    width: 25px;
     height: 1px;
     display: inline-block;
 }
 
-/* Theme Colors for Badges */
-.service-stack-panel[data-service="1"] .service-stack-badge,
-.service-stack-panel[data-service="4"] .service-stack-badge {
-    color: #fcc119;
-}
-
-.service-stack-panel[data-service="1"] .service-stack-badge::before,
-.service-stack-panel[data-service="4"] .service-stack-badge::before {
-    background: #fcc119;
-}
-
-.service-stack-panel[data-service="2"] .service-stack-badge,
-.service-stack-panel[data-service="5"] .service-stack-badge {
-    color: #00dcff;
-}
-
-.service-stack-panel[data-service="2"] .service-stack-badge::before,
-.service-stack-panel[data-service="5"] .service-stack-badge::before {
-    background: #00dcff;
-}
-
-.service-stack-panel[data-service="3"] .service-stack-badge,
-.service-stack-panel[data-service="6"] .service-stack-badge {
-    color: #ef4444;
-}
-
-.service-stack-panel[data-service="3"] .service-stack-badge::before,
-.service-stack-panel[data-service="6"] .service-stack-badge::before {
-    background: #ef4444;
-}
-
-
-.service-stack-title {
+.service-slide-title {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     line-height: 1.1;
-    color: #FFFFFF;
     text-transform: uppercase;
 }
 
-.service-stack-desc {
+.service-slide-desc {
     font-family: var(--font-main);
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.5;
     color: rgba(226, 232, 240, 0.85);
-    max-width: 550px;
+    flex-grow: 1; /* Pushes button to bottom */
 }
 
-/* Button & Media Styling */
-.service-stack-btn {
+/* Button & Action Styling */
+.service-slide-btn {
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: fit-content;
-    padding: 16px 32px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
     color: #FFFFFF;
     font-family: var(--font-main);
     font-weight: 600;
@@ -254,128 +206,55 @@
     transition: all 0.3s ease;
 }
 
-.service-stack-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(10px);
+.service-slide-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
-.service-stack-media {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-stack-image-wrapper {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    background: rgba(15, 23, 42, 0.5);
-}
-
-.service-stack-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    opacity: 0.5;
-}
-
-.service-stack-placeholder svg {
-    width: 80px;
-    height: 80px;
-}
-
-@media (max-width: 991px) {
-    .service-stack-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .service-stack-panel {
-        padding: 60px 20px;
-        height: auto;
-        /* Allow height to adjust if content is long */
-        min-height: 100vh;
-        min-height: 100dvh; /* Dynamic viewport for mobile */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .service-stack-title {
-        font-size: 2rem;
-    }
-
-    .service-stack-desc {
-        font-size: 1rem;
-        line-height: 1.6;
-        max-width: 100%;
-    }
-
-    .service-stack-text {
-        align-items: center;
-        gap: 20px;
-    }
-
-    .service-stack-media {
-        min-height: 250px;
-        height: auto;
-        order: -1;
-    }
-
-    .service-stack-image-wrapper {
-        border-radius: 20px;
-    }
-
-    .service-stack-btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .service-slide-card {
+        flex: 0 0 calc(50% - 15px); /* 2 cards visible */
+        aspect-ratio: auto;
     }
 }
 
-/* Specific small mobile adjustments */
-@media (max-width: 480px) {
-    .service-stack-title {
+@media (max-width: 768px) {
+    .services-slider-section {
+        padding: 50px 0;
+    }
+    
+    .services-slider-container {
+        padding: 0 20px;
+    }
+
+    .service-slide-card {
+        flex: 0 0 calc(100% - 20px); /* 1 card visible on mobile, slightly smaller to peek next */
+        min-height: 550px;
+    }
+
+    .service-slide-media {
+        height: 40%;
+        padding-top: 20px;
+    }
+
+    .service-slide-title {
         font-size: 1.6rem;
     }
-
-    .service-stack-panel {
-        padding: 80px 15px 40px;
-    }
-
-    .service-stack-media {
-        min-height: 200px;
-    }
-
-    .service-stack-desc {
-        font-size: 0.95rem;
-    }
 }
 
-/* New Image Styles */
-.service-stack-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensure full image is visible */
-    border-radius: 20px;
-    display: block;
-}
-
-.service-stack-image-wrapper {
-    background: transparent; /* Remove dark background if image covers it */
-    box-shadow: none; /* Optional: Remove box shadow if image has its own or simple look */
-    border: none;
-    overflow: visible; /* Allow effects if needed */
+@media (max-width: 480px) {
+    .service-slide-card {
+        flex: 0 0 100%;
+        min-height: 500px;
+    }
+    .service-slide-media {
+        height: 200px;
+    }
+    .service-slide-content {
+        padding: 20px;
+    }
+    .service-slide-desc {
+        font-size: 0.9rem;
+    }
 }

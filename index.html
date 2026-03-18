@@ -856,200 +856,133 @@
         </div>
 
         <!-- SERVICES STACKING CARDS SECTION -->
-        <section class="services-stack-section" id="services">
-            <div class="services-stack-container">
+        <!-- SERVICES SLIDER SECTION (Replaces Stacking Cards) -->
+        <section class="services-slider-section" id="services">
+            <div class="container services-slider-container">
+                <div class="services-slider-wrapper">
+                    <!-- Nav indicators wrapper added via JS or manually -->
+                    <div class="services-slider-progress">
+                        <div class="services-slider-indicator" id="sliderIndicator"></div>
+                    </div>
 
-                <!-- Service 1: Menú Digital -->
-                <div class="service-stack-panel" data-service="1">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">GESTIÓN</span>
-                            <h3 class="service-stack-title text-gradient-gold">Ingreso de Insumos</h3>
-                            <p class="service-stack-desc">
-                                Registra cada uno de los ingredientes que utilizas en tu operación con sus
-                                respectivos
-                                Gramajes, Medidas y Categorías. Así le facilitarás a GNIA darte las estadísticas
-                                exactas
-                                del stock existente.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Ver Demo</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                    <div class="services-slider-track" id="servicesSliderTrack">
+                        
+                        <!-- Service 1: Menú Digital -->
+                        <div class="service-slide-card" data-service="1">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasInsumos.png?alt=media&token=dd066be9-2255-4728-83ff-e653ba2d917c"
-                                    alt="Ingreso de Insumos" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Ingreso de Insumos" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">GESTIÓN</span>
+                                <h3 class="service-slide-title text-gradient-gold">Ingreso de Insumos</h3>
+                                <p class="service-slide-desc">Registra cada uno de los ingredientes que utilizas en tu operación con sus respectivos Gramajes, Medidas y Categorías. Así le facilitarás a GNIA darte las estadísticas exactas del stock existente.</p>
+                                <button class="service-slide-btn">
+                                    <span>Ver Demo</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Service 2: Reservas -->
-                <div class="service-stack-panel" data-service="2">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">ESTANDARIZACIÓN</span>
-                            <h3 class="service-stack-title text-gradient-gold">Creación de Recetas</h3>
-                            <p class="service-stack-desc">
-                                Crea, Organiza, Estandariza y Rentabiliza cada una de las recetas de tu repertorio
-                                en un Panel Digital, permitiendote conocer margenes, compartir procesos con tu
-                                equipo y modificar precios.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Digitalizar Recetas</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                        <!-- Service 2: Reservas -->
+                        <div class="service-slide-card" data-service="2">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasRecetas.png?alt=media&token=859abafc-e381-4fce-a625-51b351b04bf2"
-                                    alt="Creación de Recetas" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Creación de Recetas" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">ESTANDARIZACIÓN</span>
+                                <h3 class="service-slide-title text-gradient-gold">Creación de Recetas</h3>
+                                <p class="service-slide-desc">Crea, Organiza, Estandariza y Rentabiliza cada una de las recetas de tu repertorio en un Panel Digital, permitiendote conocer margenes, compartir procesos con tu equipo y modificar precios.</p>
+                                <button class="service-slide-btn">
+                                    <span>Digitalizar Recetas</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Service 3: Pedidos en Línea -->
-                <div class="service-stack-panel" data-service="3">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">RENTABILIDAD</span>
-                            <h3 class="service-stack-title text-gradient-gold">Ingeniería de Costos</h3>
-                            <p class="service-stack-desc">
-                                La Lógica robusta de GNIA te permite darle la mejor rentabilidad a tu negocio, no
-                                solo
-                                te descuenta en cada venta los insumos, realiza todo un cálculo validando las
-                                Mermas,
-                                Recetas, Producción, Costos operativos, Impuesto, Costos Fijos y Variables.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Calcular Rentabilidad</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                        <!-- Service 3: Pedidos en Línea -->
+                        <div class="service-slide-card" data-service="3">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasIngenieriaCostos.png?alt=media&token=ab989c3e-96b9-4d5e-8f54-84e8a406ac2f"
-                                    alt="Ingeniería de Costos" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Ingeniería de Costos" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">RENTABILIDAD</span>
+                                <h3 class="service-slide-title text-gradient-gold">Ingeniería de Costos</h3>
+                                <p class="service-slide-desc">La Lógica robusta de GNIA te permite darle la mejor rentabilidad a tu negocio, no solo te descuenta en cada venta los insumos, realiza todo un cálculo validando las Mermas, Recetas, Producción, Costos operativos, Impuesto, Costos Fijos y Variables.</p>
+                                <button class="service-slide-btn">
+                                    <span>Calcular Rentabilidad</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Service 4: Encuestas -->
-                <div class="service-stack-panel" data-service="4">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">CONTROL</span>
-                            <h3 class="service-stack-title text-gradient-gold">Gestión de Inventarios</h3>
-                            <p class="service-stack-desc">
-                                Controla la cantidad de Stock y tus pedidos a proveedores a un solo Click, tú como
-                                tu equipo pueden registrar el ingreso y cantidades de insumos, subiendo
-                                automáticamente la información al sistema y actualizando en tiempo real cada dato.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Gestionar Stock</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                        <!-- Service 4: Encuestas -->
+                        <div class="service-slide-card" data-service="4">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasInventarios.png?alt=media&token=4740aa7a-ac91-4203-82c3-bd9c9123c3b9"
-                                    alt="Gestión de Inventarios" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Gestión de Inventarios" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">CONTROL</span>
+                                <h3 class="service-slide-title text-gradient-gold">Gestión de Inventarios</h3>
+                                <p class="service-slide-desc">Controla la cantidad de Stock y tus pedidos a proveedores a un solo Click, tú como tu equipo pueden registrar el ingreso y cantidades de insumos, subiendo automáticamente la información al sistema y actualizando en tiempo real cada dato.</p>
+                                <button class="service-slide-btn">
+                                    <span>Gestionar Stock</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Service 5: Marketing -->
-                <div class="service-stack-panel" data-service="5">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">VISIBILIDAD</span>
-                            <h3 class="service-stack-title text-gradient-gold">Catálogos Digitales</h3>
-                            <p class="service-stack-desc">
-                                Comparte al mundo tus platos, tu estilo y tu negocio de forma profesional y
-                                atractiva, permitiéndole a cada cliente ver una Carta Digital intuitiva y fácil de
-                                manejar, así lo conquistarás antes de que realice su pedido.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Ver Catálogos</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                        <!-- Service 5: Marketing -->
+                        <div class="service-slide-card" data-service="5">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallaCatologos.png?alt=media&token=3c909964-18d9-410f-accb-26cdb7c2b3ba"
-                                    alt="Catálogos Digitales" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Catálogos Digitales" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">VISIBILIDAD</span>
+                                <h3 class="service-slide-title text-gradient-gold">Catálogos Digitales</h3>
+                                <p class="service-slide-desc">Comparte al mundo tus platos, tu estilo y tu negocio de forma profesional y atractiva, permitiéndole a cada cliente ver una Carta Digital intuitiva y fácil de manejar, así lo conquistarás antes de que realice su pedido.</p>
+                                <button class="service-slide-btn">
+                                    <span>Ver Catálogos</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Service 6: Analytics & Reports -->
-                <div class="service-stack-panel" data-service="6">
-                    <div class="service-stack-content">
-                        <div class="service-stack-text">
-                            <span class="service-stack-badge">GESTIÓN INTEGRAL</span>
-                            <h3 class="service-stack-title text-gradient-gold">Negocio 360</h3>
-                            <p class="service-stack-desc">
-                                Administra todo tu negocio y ten el control de Inventarios, Proveedores,
-                                Rendimiento,
-                                Ventas, Comandas, Personal y Finanzas desde uno solo Perfil. GNIA se encarga de los
-                                datos, tu te encargas de actuar para seguir incrementando ventas.
-                            </p>
-                            <button class="service-stack-btn">
-                                <span>Tomar el Control</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="service-stack-media">
-                            <div class="service-stack-image-wrapper">
-                                <div class="service-stack-placeholder" style="display: none;"></div>
+                        <!-- Service 6: Analytics & Reports -->
+                        <div class="service-slide-card" data-service="6">
+                            <div class="service-slide-media">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/marketchef-573d4.firebasestorage.app/o/LandingGNIA%2FPNGs%20Generales%2FPantallasNegocio360.png?alt=media&token=e27cb8f6-9a5f-4d5c-933c-3052326ede60"
-                                    alt="Negocio 360" class="service-stack-img" loading="lazy" width="1200"
-                                    height="800">
+                                    alt="Negocio 360" loading="lazy">
+                            </div>
+                            <div class="service-slide-content">
+                                <span class="service-slide-badge">GESTIÓN INTEGRAL</span>
+                                <h3 class="service-slide-title text-gradient-gold">Negocio 360</h3>
+                                <p class="service-slide-desc">Administra todo tu negocio y ten el control de Inventarios, Proveedores, Rendimiento, Ventas, Comandas, Personal y Finanzas desde uno solo Perfil. GNIA se encarga de los datos, tu te encargas de actuar para seguir incrementando ventas.</p>
+                                <button class="service-slide-btn">
+                                    <span>Tomar el Control</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- Pricing Plans -->
