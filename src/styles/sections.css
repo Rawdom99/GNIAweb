@@ -134,6 +134,27 @@
     padding-top: 5px; /* Reducido de 10px */
 }
 
+/* Row for centered tagline - spans across both columns */
+.hero-tagline-row {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    z-index: 3;
+    position: relative;
+}
+
+.hero-tagline-centered {
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
+    color: #ffffff;
+    font-weight: 700;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 .hero-catalog-col {
     position: relative;
     display: flex;
