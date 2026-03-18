@@ -8,9 +8,57 @@
     width: 100%;
     background: #020617;
     overflow: visible;
-    /* Crucial for GSAP Pinning */
+    /* Default: visible. JS adds .stack-gsap-active to switch to clip */
     z-index: 20;
-    /* Aislamos y blindamos el contexto de apilamiento para prevenir solapamiento de capas anteriores */
+    isolation: isolate;
+    /* Isolate stacking context to prevent z-index leaking */
+}
+
+/* When GSAP initializes successfully, contain the pinned cards */
+.services-stack-section.stack-gsap-active {
+    overflow: clip;
+}
+
+/* FALLBACK: If GSAP fails to load, show cards normally */
+.services-stack-section.stack-fallback .service-stack-panel {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.services-stack-section.stack-fallback .service-stack-content {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+.services-stack-section.stack-fallback .service-stack-image-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* MOBILE NO-PIN: Stacking disabled, cards flow naturally */
+.services-stack-section.stack-no-pin .service-stack-panel {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    transform: none !important;
+}
+
+.services-stack-section.stack-no-pin .service-stack-content {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+.services-stack-section.stack-no-pin .service-stack-image-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
 }
 
 .services-stack-container {
@@ -23,6 +71,7 @@
     /* GSAP will handle pinning */
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* Modern: respects dynamic viewport (mobile address bar) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,6 +308,7 @@
         height: auto;
         /* Allow height to adjust if content is long */
         min-height: 100vh;
+        min-height: 100dvh; /* Dynamic viewport for mobile */
         display: flex;
         flex-direction: column;
         justify-content: center;
