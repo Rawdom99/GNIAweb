@@ -10,7 +10,7 @@
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' https://firebasestorage.googleapis.com data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://fonts.googleapis.com; frame-src 'self';">
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; img-src 'self' https://firebasestorage.googleapis.com https://flagcdn.com data:; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src 'self' https://firebasestorage.googleapis.com; connect-src 'self' https://fonts.googleapis.com; frame-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -275,6 +275,11 @@
                         </svg>
                         <span class="tab-text">PLANES<br><b>RESTAURANTES</b></span>
                     </button>
+                </div>
+
+                <!-- Scroll Progress Bar (Mobile) -->
+                <div class="pricing-slider-progress" id="pricingProgressContainer">
+                    <div class="pricing-slider-indicator" id="pricingIndicator"></div>
                 </div>
 
                 <!-- ========== PANE: Planes Chefs (FREE / FLASH / PRO) ========== -->
