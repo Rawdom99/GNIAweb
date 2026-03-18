@@ -119,14 +119,19 @@
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     color: #ffffff;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reducido de 40px */
     max-width: 600px;
     line-height: 1.6;
 }
 
-.hero-actions {
+/* Independent actions row — spans both grid columns on desktop */
+.hero-actions-row {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    padding-top: 5px; /* Reducido de 10px */
 }
 
 .hero-catalog-col {
@@ -191,13 +196,21 @@
     }
 
     .hero-catalog-col {
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 0;
     }
 
-    .hero-actions {
+    .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        margin-bottom: 15px; /* Reducido de 25px */
+    }
+
+    .hero-actions-row {
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 5px; /* Reducido de 10px */
     }
 
     .hero-tagline {
