@@ -159,3 +159,62 @@ function updatePrices(currency) {
         el.appendChild(small);
     });
 }
+
+// --- Pricing Horizontal Slider Indicator (Mobile) ---
+function updatePricingProgress() {
+    const activePane = document.querySelector('.pricing-pane.active .pricing-grid');
+    const indicator = document.getElementById('pricingIndicator');
+    const progressContainer = document.getElementById('pricingProgressContainer');
+    
+    if (!indicator || !progressContainer || !activePane) return;
+
+    if (window.innerWidth > 1024) {
+        progressContainer.style.display = 'none';
+        return;
+    }
+
+    progressContainer.style.display = 'block';
+
+    var maxScrollLeft = activePane.scrollWidth - activePane.clientWidth;
+    
+    if (maxScrollLeft <= 0) {
+        indicator.style.width = '100%';
+        indicator.style.left = '0%';
+        return;
+    }
+
+    var scrollPercentage = activePane.scrollLeft / maxScrollLeft;
+    var visibleRatio = activePane.clientWidth / activePane.scrollWidth;
+    var indicatorWidthPercent = visibleRatio * 100;
+    
+    // Minimum width for the indicator so it's always visible and usable
+    indicatorWidthPercent = Math.max(20, indicatorWidthPercent); 
+    indicator.style.width = indicatorWidthPercent + '%';
+
+    var maxTranslate = 100 - indicatorWidthPercent;
+    var currentTranslate = maxTranslate * scrollPercentage;
+
+    indicator.style.left = currentTranslate + '%';
+}
+
+// Initialize scroll listeners on load
+document.addEventListener('DOMContentLoaded', () => {
+    const pricingGrids = document.querySelectorAll('.pricing-grid');
+    pricingGrids.forEach(grid => {
+        grid.addEventListener('scroll', () => {
+            window.requestAnimationFrame(updatePricingProgress);
+        });
+    });
+
+    window.addEventListener('resize', updatePricingProgress);
+
+    // Re-check progress whenever user switches tabs 
+    const pricingTabBtns = document.querySelectorAll('.pricing-tab-btn');
+    pricingTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            setTimeout(updatePricingProgress, 50); // slight delay for layout calc
+        });
+    });
+
+    setTimeout(updatePricingProgress, 100);
+});

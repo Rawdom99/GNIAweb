@@ -140,15 +140,13 @@
 
 @media (max-width: 1024px) {
     .pricing-tabs-container {
-        gap: 12px;
+        gap: 10px;
         flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         width: 100%;
-        padding: 10px 20px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        /* Hide scrollbar for tabs */
+        padding: 5px 10px;
+        overflow-x: visible; /* Elimina scroll vertical innecesario para los botones */
+        margin-bottom: 20px;
     }
 
     .pricing-tabs-container::-webkit-scrollbar {
@@ -156,10 +154,11 @@
     }
 
     .pricing-tab-btn {
-        padding: 12px 15px;
+        padding: 10px 5px;
         font-size: 0.65rem;
-        flex: 0 0 auto;
-        min-width: 140px;
+        flex: 1 1 50%;
+        min-width: 0;
+        max-width: 160px;
         justify-content: center;
         text-align: center;
         line-height: 1.2;
@@ -652,4 +651,34 @@
 
 .currency-option.active .check-icon {
     display: block;
+}
+
+/* --- Pricing Slider Progress (Mobile Only) --- */
+.pricing-slider-progress {
+    width: 60%;
+    max-width: 300px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin: 0 auto 30px auto;
+    overflow: hidden;
+    position: relative;
+    display: none;
+}
+
+.pricing-slider-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #FFD700;
+    width: 33.333%;
+    border-radius: 6px;
+    transition: width 0.1s, left 0.1s;
+}
+
+@media (max-width: 1024px) {
+    .pricing-slider-progress {
+        display: block;
+    }
 }
